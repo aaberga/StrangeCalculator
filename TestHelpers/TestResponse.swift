@@ -6,22 +6,24 @@
 //  Copyright © 2019 iBat Inc. All rights reserved.
 //
 
-import Foundation
 import XCTest
 
-@testable import Hello_Coordinator
+@testable import StrangeCalculator
 
-
-typealias ResultActionType = (Any, Error?) -> Void
 typealias TestKey = String
+typealias ResultType = (result: Any?, error: Error?)
+typealias ResultActionType = (ResultType) -> Void
 
 
 class TestResponse {
     
+    var testKey: TestKey = ""
     var expectation: XCTestExpectation?
 
     var results: [String: Any] = [:]
     var errors: [String: Error] = [:]
+
+    var data: [String: Any] = [:]
 
     var responseActions: [TestKey: ResultActionType] = [:]
 }

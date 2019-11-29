@@ -7,15 +7,13 @@
 //
 
 import XCTest
+
 @testable import StrangeCalculator
 
-class StrangeCalculatorTests: XCTestCase, MainDisplayView {
+
+class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
     
     // Properties
-    
-    var expectations: [String: XCTestExpectation] = [:]
-    var results: [String: Any] = [:]
-    var errors: [String: Error] = [:]
 
     var coordinator: MainCoordinator?
  
@@ -24,6 +22,7 @@ class StrangeCalculatorTests: XCTestCase, MainDisplayView {
     
     override func setUp() {
         
+        super.setUp()
         self.coordinator = MainCoordinator(mainController: self)
     }
 
@@ -36,16 +35,27 @@ class StrangeCalculatorTests: XCTestCase, MainDisplayView {
     
     func clearDisplay() {
         
-        if let currentExpectation = self.expectations["testPowerful"] {
-            currentExpectation.fulfill()
+        if let testResponse = self.testResponse {
+            
+            self.evaluateResponse(key: testResponse.testKey, response: (result: nil, error: nil))
         }
+
+//        if let currentExpectation = self.testResponse?.expectation {
+//            currentExpectation.fulfill()
+//        }
     }
     
     func displayPowerfulResult(_ result: Bool, error: Error?) {
         
-        if let currentExpectation = self.expectations["testPowerful"] {
+        if let testResponse = self.testResponse {
             
-            if let expectedError = self.errors["testPowerful"] {
+            self.evaluateResponse(key: testResponse.testKey, response: (result: result, error: error))
+        }
+
+        /*
+        if let currentExpectation = self.testResponse?.expectation {
+            
+            if let expectedError = self.testResponse?.errors["testPowerful"] {
                 
                 if let error = error {
                     
@@ -56,7 +66,7 @@ class StrangeCalculatorTests: XCTestCase, MainDisplayView {
                 }
             }
             
-            if let expectedResult = self.results["testPowerful"] as? Bool {
+            if let expectedResult = self.testResponse?.results["testPowerful"] as? Bool {
                 
                 if result == expectedResult {
                     
@@ -64,34 +74,22 @@ class StrangeCalculatorTests: XCTestCase, MainDisplayView {
                 }
             }
         }
+        */
     }
     
     func displayComplementResult(_ result: NSInteger, error: Error?) {
         
+        if let testResponse = self.testResponse {
+            
+            self.evaluateResponse(key: testResponse.testKey, response: (result: result, error: error))
+        }
     }
     
     func displayFactorialResult(_ result: Double, error: Error?) {
         
-        if let currentExpectation = self.expectations["testFactorial"] {
-
-            if let expectedError = self.errors["testFactorial"] {
-                
-                if let error = error {
-                    
-                    if error.localizedDescription == expectedError.localizedDescription {
-                        
-                        currentExpectation.fulfill()
-                    }
-                }
-            }
+        if let testResponse = self.testResponse {
             
-            if let expectedResult = self.results["testFactorial"] as? Double {
-                
-                if result == expectedResult {
-                    
-                    currentExpectation.fulfill()
-                }
-            }
+            self.evaluateResponse(key: testResponse.testKey, response: (result: result, error: error))
         }
     }
     
@@ -104,7 +102,7 @@ class StrangeCalculatorTests: XCTestCase, MainDisplayView {
 
         if let coordinator = self.coordinator  {
             
-            self.expectations["testClear"] = expectationGuard
+            self.testResponse?.expectation = expectationGuard
             coordinator.resetDisplay()        
         }
         
@@ -118,12 +116,12 @@ class StrangeCalculatorTests: XCTestCase, MainDisplayView {
         
         let expectationGuard = self.expectation(description: "testPowerful")
         
-        self.results["testPowerful"] = true
-        self.errors["testPowerful"] = nil
+        self.testResponse?.results["testPowerful"] = true
+        self.testResponse?.errors["testPowerful"] = nil
         
         if let coordinator = self.coordinator  {
             
-            self.expectations["testPowerful"] = expectationGuard
+            self.testResponse?.expectation = expectationGuard
             coordinator.isNumberPowerful("1")
         }
         
@@ -140,7 +138,7 @@ class StrangeCalculatorTests: XCTestCase, MainDisplayView {
 
         if let coordinator = self.coordinator  {
             
-            self.expectations["testComplement"] = expectationGuard
+            self.testResponse?.expectation = expectationGuard
             coordinator.calculateComplement("1")
         }
         
@@ -152,16 +150,18 @@ class StrangeCalculatorTests: XCTestCase, MainDisplayView {
     }
 
     
-    func testFactorial() {
+    func testFactorial_1() {
         
-        let expectationGuard = self.expectation(description: "testFactorial")
-
-        self.results["testFactorial"] = 1.0
-        self.errors["testFactorial"] = nil
+        let testKey = "testFactorial_1"
+        let expectationGuard = self.expectation(description: testKey)
+        
+        self.testResponse?.testKey = testKey
+        self.testResponse?.results["testFactorial_1"] = 1.0
+        self.testResponse?.errors["testFactorial_1"] = nil
         
         if let coordinator = self.coordinator  {
             
-            self.expectations["testFactorial"] = expectationGuard
+            self.testResponse?.expectation = expectationGuard
             coordinator.calculateFactorial("1")
         }
         

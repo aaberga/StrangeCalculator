@@ -8,8 +8,9 @@
 
 import XCTest
 
-@testable import Hello_Coordinator
+@testable import StrangeCalculator
 
+ 
 class TargetViewTestCase: XCTestCase, TargetView {
     
     // Properties
@@ -17,20 +18,24 @@ class TargetViewTestCase: XCTestCase, TargetView {
     var testResponse: TestResponse?
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        self.testResponse = TestResponse()
     }
 
+    /*
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
+    */
     
     // Methods
     
-    func evaluateResponse(key testKey: TestKey, response: ResultActionType? = nil) {
+    func evaluateResponse(key testKey: TestKey, response: ResultType? = nil) {
         
-        //    var responseActions: [ResultKey: ResultActionType] = [:]
+        // var responseActions: [ResultKey: ResultActionType] = [:]
         
+        
+        
+        /*
         if let currentExpectation = self.testResponse?.expectation {
             
             if let currentResponse = response {
@@ -44,6 +49,31 @@ class TargetViewTestCase: XCTestCase, TargetView {
             }
             
         }
-
+        
+        if let response = response {
+            
+            if let currentExpectation = self.testResponse?.expectation {
+                
+                if let expectedError = self.testResponse?.errors["testFactorial_1"] {
+                    
+                    if let error = response.error {
+                        
+                        if error.localizedDescription == expectedError.localizedDescription {
+                            
+                            currentExpectation.fulfill()
+                        }
+                    }
+                }
+                
+                if let expectedResult = self.testResponse?.results["testFactorial_1"] as? Double {
+                    
+                    if result == expectedResult {
+                        
+                        currentExpectation.fulfill()
+                    }
+                }
+            }
+        }
+         */
     }
 }

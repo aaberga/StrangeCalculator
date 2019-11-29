@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B8C3B8D23916BAA00A12D6E /* TestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8C3B8B23916BAA00A12D6E /* TestResponse.swift */; };
+		1B8C3B8E23916BAA00A12D6E /* TargetViewTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8C3B8C23916BAA00A12D6E /* TargetViewTestCase.swift */; };
 		1BBBD8CB238D662C007A47F2 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBBD8CA238D662C007A47F2 /* MainCoordinator.swift */; };
 		1BE0D7B8238D608000702CFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0D7B7238D608000702CFE /* AppDelegate.swift */; };
 		1BE0D7BA238D608000702CFE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0D7B9238D608000702CFE /* SceneDelegate.swift */; };
@@ -38,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		1B4AABF8238D9438004565B6 /* PowerfulNumber.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = PowerfulNumber.py; sourceTree = "<group>"; };
+		1B8C3B8B23916BAA00A12D6E /* TestResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestResponse.swift; sourceTree = "<group>"; };
+		1B8C3B8C23916BAA00A12D6E /* TargetViewTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetViewTestCase.swift; sourceTree = "<group>"; };
 		1BBBD8CA238D662C007A47F2 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		1BE0D7B4238D608000702CFE /* StrangeCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StrangeCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BE0D7B7238D608000702CFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,11 +85,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B8C3B8A23916BAA00A12D6E /* TestHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				1B8C3B8B23916BAA00A12D6E /* TestResponse.swift */,
+				1B8C3B8C23916BAA00A12D6E /* TargetViewTestCase.swift */,
+			);
+			path = TestHelpers;
+			sourceTree = "<group>";
+		};
 		1BE0D7AB238D608000702CFE = {
 			isa = PBXGroup;
 			children = (
 				1BE0D7E7238D636500702CFE /* AppArchitecture */,
 				1BE0D7B6238D608000702CFE /* StrangeCalculator */,
+				1B8C3B8A23916BAA00A12D6E /* TestHelpers */,
 				1BE0D7CD238D608300702CFE /* StrangeCalculatorTests */,
 				1BE0D7D8238D608300702CFE /* StrangeCalculatorUITests */,
 				1BE0D7B5238D608000702CFE /* Products */,
@@ -287,6 +301,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B8C3B8D23916BAA00A12D6E /* TestResponse.swift in Sources */,
+				1B8C3B8E23916BAA00A12D6E /* TargetViewTestCase.swift in Sources */,
 				1BE0D7CF238D608300702CFE /* StrangeCalculatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
