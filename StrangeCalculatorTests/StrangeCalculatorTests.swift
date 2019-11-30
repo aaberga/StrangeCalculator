@@ -80,10 +80,7 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
         
         self.testResponse?.testKey = testKey
         self.testResponse?.expectation = expectationGuard
-        
-        //        self.testResponse?.results[testKey] = 1.0
-        //        self.testResponse?.errors[testKey] = nil
-        
+                
         if let coordinator = self.coordinator  {
             
             coordinator.resetDisplay()
@@ -96,11 +93,11 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
     }
     
     
-    // MARK: • Powerful
+    // MARK: • How To Use Test Injection
     
-    func testPowerful() {
+    func testPowerful_ExpectedData() {
         
-        let testKey = "testPowerful"
+        let testKey = "testPowerful_ExpectedData"
         let expectationGuard = self.expectation(description: testKey)
         
         self.testResponse?.testKey = testKey
@@ -143,7 +140,6 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
             }
         }
         
-        
         self.testResponse?.responseActions[testKey] = closureName
         
         
@@ -161,6 +157,10 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
     
     
     
+    
+    // MARK: • Powerful
+    
+
     func testPowerful_3() {
         
         let testKey = "testPowerful_1"
