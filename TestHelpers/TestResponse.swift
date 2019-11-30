@@ -12,7 +12,7 @@ import XCTest
 
 typealias TestKey = String
 typealias ResultType = (result: Any?, error: Error?)
-typealias ResultActionType = (ResultType) -> Void
+typealias ResultActionType = (_ result: Any?, _ error: Error?) -> Void
 
 
 class TestResponse {
@@ -20,8 +20,8 @@ class TestResponse {
     var testKey: TestKey = ""
     var expectation: XCTestExpectation?
 
-    var results: [String: Any] = [:]
-    var errors: [String: Error] = [:]
+    var expectedResults: [String: Any] = [:]
+    var expectedErrors: [String: Error] = [:]
 
     var data: [String: Any] = [:]
 

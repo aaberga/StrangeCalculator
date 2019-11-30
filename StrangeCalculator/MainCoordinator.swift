@@ -28,7 +28,7 @@ class MainCoordinator: Coordinator {
    
    func resetDisplay() {
        
-       if let viewController = self.viewController as? ViewController {
+       if let viewController = self.viewController as? MainDisplayView {
            
            viewController.clearDisplay()
        }

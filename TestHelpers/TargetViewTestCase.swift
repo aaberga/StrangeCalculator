@@ -31,49 +31,65 @@ class TargetViewTestCase: XCTestCase, TargetView {
     
     func evaluateResponse(key testKey: TestKey, response: ResultType? = nil) {
         
-        // var responseActions: [ResultKey: ResultActionType] = [:]
-        
-        
-        
-        /*
-        if let currentExpectation = self.testResponse?.expectation {
+//        print("key: \(testKey)")
+//        print("response: \(String(describing: response))")
+
+        if let testResponse = self.testResponse {
             
-            if let currentResponse = response {
+            if let currentExpectation = testResponse.expectation {
                 
-                
-            }
-            
-            if let responseAction = self.testResponse?.responseActions[testKey] {
-                
-                
-            }
-            
-        }
-        
-        if let response = response {
-            
-            if let currentExpectation = self.testResponse?.expectation {
-                
-                if let expectedError = self.testResponse?.errors["testFactorial_1"] {
+                if let currentResponse = response, let responseAction = self.testResponse?.responseActions[testKey] {
                     
-                    if let error = response.error {
+                    responseAction(currentResponse.result, currentResponse.error)
+                                     
+                } else if let currentResponse = response {
+                    
+                    let expectedResult = testResponse.expectedResults[testKey]
+                    let expectedError = testResponse.expectedErrors[testKey]
+
+                    if (currentResponse.error == nil) && (currentResponse.result == nil) {
                         
-                        if error.localizedDescription == expectedError.localizedDescription {
+                        self.evaluateResponse(key: testKey)
+                    }
+                    
+                    if let expectedError = expectedError,
+                        let currentError = currentResponse.error {
+                        
+                        if expectedError.localizedDescription == currentError.localizedDescription {
                             
                             currentExpectation.fulfill()
+                            
+                        } else {
+                        
+                            XCTFail("Response error \(currentError) not matched by expectations")
                         }
+                        
+                    } else if let expectedResult = expectedResult,
+                        let currentResult = currentResponse.result {
+                        
+                        if (expectedResult as AnyObject).description == (currentResult as AnyObject).description {
+                            
+                            currentExpectation.fulfill()
+                            
+                        } else {
+                            
+                            XCTFail("Response value \(currentResult) not matched by expectations for test key \(testKey)")
+                        }
+                        
                     }
+                } else {
+                    
+                    currentExpectation.fulfill()
                 }
                 
-                if let expectedResult = self.testResponse?.results["testFactorial_1"] as? Double {
-                    
-                    if result == expectedResult {
-                        
-                        currentExpectation.fulfill()
-                    }
-                }
+            } else {
+                
+                XCTFail("Missing Expectation!!")
             }
+            
+        } else {
+            
+            XCTFail("Missing TestResponse!!")
         }
-         */
     }
 }
