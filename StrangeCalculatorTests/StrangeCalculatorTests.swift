@@ -419,7 +419,6 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
             if let error = error {
                 
                 XCTFail("Error in test/key: \(testKey): \(error)")
-                return
             }
             
             if let result = result as? Bool {
@@ -510,6 +509,7 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
         }
     }
 
+    
     // MARK: • Complement
     
     func testComplement_1() {
