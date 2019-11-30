@@ -129,35 +129,38 @@ class MainCoordinator: Coordinator {
         
         var n = input
         
-        while (n / 2) == 0 {
+        while (n.isMultiple(of: 2)) {
             
             var power = 0
-            while (n / 2) == 0 {
+            while (n.isMultiple(of: 2)) {
                 
-                n = n/2
+                let (q, _) = n.quotientAndRemainder(dividingBy: 2)
+                n = q
                 power = power + 1
                 
                 // If only 2 ^ 1 divides
                 // n (not higher powers),
                 // then return false
-                
-                if power == 1 {
-                    return false
-                }
+            }
+            
+            if power == 1 {
+                return false
             }
         }
         
         let first = 3
-        let last = Int(sqrt(Double(input)))+1
+        let last = Int(sqrt(Double(n)))
         let interval = 2
         
         for factor in stride(from: first, through: last, by: interval) {
             
             // Find highest power of "factor" that divides n
-            var power = 0;
-            while (n % factor == 0) {
-                n = n / factor;
-                power = power + 1;
+            var power = 0
+            while (n.isMultiple(of: factor)) {
+                
+                let (q, _) = n.quotientAndRemainder(dividingBy: factor)
+                n = q;
+                power = power + 1
             }
             
             // If only factor^1 divides n (not higher powers),
@@ -166,11 +169,12 @@ class MainCoordinator: Coordinator {
                 return false;
             }
         }
-        
+
         // n must be 1 now if it is not a prime numenr.
         // Since prime numbers are not powerful, we return
         // false if n is not 1.
-        return (n == 1);
+
+        return (n == 1)
     }
     
     

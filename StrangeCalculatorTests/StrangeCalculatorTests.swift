@@ -72,7 +72,7 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
     
     
     // MARK: • ResetDisplay
-
+    
     func testClear() {
         
         let testKey = "testClear"
@@ -80,7 +80,7 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
         
         self.testResponse?.testKey = testKey
         self.testResponse?.expectation = expectationGuard
-                
+        
         if let coordinator = self.coordinator  {
             
             coordinator.resetDisplay()
@@ -108,7 +108,6 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
         
         if let coordinator = self.coordinator  {
             
-            self.testResponse?.expectation = expectationGuard
             coordinator.isNumberPowerful("1")
         }
         
@@ -137,6 +136,9 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
             if let result = result as? Bool {
                 
                 XCTAssert(result == true, "Failed to identify 1 as Powerful Number!!")
+                if result == true {
+                    expectationGuard.fulfill()
+                }
             }
         }
         
@@ -176,7 +178,10 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
             
             if let result = result as? Bool {
                 
-                XCTAssert(result == true, "Failed to identify 3 as Powerful Number!!")
+                XCTAssert(result == false, "Failed to identify 3 as non Powerful Number!!")
+                if result == false {
+                    expectationGuard.fulfill()
+                }
             }
         }
         
@@ -210,7 +215,10 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
             
             if let result = result as? Bool {
                 
-                XCTAssert(result == true, "Failed to identify 5 as Powerful Number!!")
+                XCTAssert(result == false, "Failed to identify 5 as non Powerful Number!!")
+                if result == false {
+                    expectationGuard.fulfill()
+                }
             }
         }
         
@@ -244,7 +252,10 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
             
             if let result = result as? Bool {
                 
-                XCTAssert(result == true, "Failed to identify 20 as Powerful Number!!")
+                XCTAssert(result == false, "Failed to identify 20 as non Powerful Number!!")
+                if result == false {
+                    expectationGuard.fulfill()
+                }
             }
         }
         
@@ -277,13 +288,15 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
             
             if let result = result as? Bool {
                 
-                XCTAssert(result == true, "Failed to identify 27 as Powerful Number!!")
+                XCTAssert(result == true, "Failed to identify 36 as Powerful Number!!")
+                if result == true {
+                    expectationGuard.fulfill()
+                }
             }
         }
         
         if let coordinator = self.coordinator  {
             
-            self.testResponse?.expectation = expectationGuard
             coordinator.isNumberPowerful("27")
         }
         
@@ -312,6 +325,9 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
             if let result = result as? Bool {
                 
                 XCTAssert(result == true, "Failed to identify 36 as Powerful Number!!")
+                if result == true {
+                    expectationGuard.fulfill()
+                }
             }
         }
         
@@ -325,7 +341,7 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
         waitForExpectations(timeout: 1) { error in
         }
     }
-
+    
     func testPowerful_44() {
         
         let testKey = "testPowerful_44"
@@ -344,7 +360,10 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
             
             if let result = result as? Bool {
                 
-                XCTAssert(result == true, "Failed to identify 36 as Powerful Number!!")
+                XCTAssert(result == false, "Failed to identify 44 as non Powerful Number!!")
+                if result == false {
+                    expectationGuard.fulfill()
+                }
             }
         }
         
