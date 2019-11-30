@@ -31,9 +31,6 @@ class TargetViewTestCase: XCTestCase, TargetView {
     
     func evaluateResponse(key testKey: TestKey, response: ResultType? = nil) {
         
-//        print("key: \(testKey)")
-//        print("response: \(String(describing: response))")
-
         if let testResponse = self.testResponse {
             
             if let currentExpectation = testResponse.expectation {

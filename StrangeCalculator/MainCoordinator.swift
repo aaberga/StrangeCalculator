@@ -25,22 +25,22 @@ class MainCoordinator: Coordinator {
     }
     
     // Helpers
-   
-   func resetDisplay() {
-       
-       if let viewController = self.viewController as? MainDisplayView {
-           
-           viewController.clearDisplay()
-       }
-   }
-
+    
+    func resetDisplay() {
+        
+        if let viewController = self.viewController as? MainDisplayView {
+            
+            viewController.clearDisplay()
+        }
+    }
+    
     
     // Logical Interface Methods
     
     func powerfulNumbers(from inputStart: String?, to inputEnd: String?) {
         
     }
-
+    
     func isNumberPowerful(_ input: String?) {
         
         if let input = input {
@@ -61,7 +61,7 @@ class MainCoordinator: Coordinator {
         
     }
     
-        
+    
     func calculateFactorial(_ input: String?) {
         
         if let input = input {
@@ -118,29 +118,29 @@ class MainCoordinator: Coordinator {
         }
         
         let first = 3
-        let last = Int(sqrt(Double(input)))
+        let last = Int(sqrt(Double(input)))+1
         let interval = 2
         
-        for factor in stride(from: first, through: last+1, by: interval) {
-        
-              // Find highest power of "factor" that divides n
-              var power = 0;
-              while (n % factor == 0) {
-                  n = n / factor;
-                  power+=1;
-              }
-        
-              // If only factor^1 divides n (not higher powers),
-              // then return false
-            if (power == 1) {
-                  return false;
+        for factor in stride(from: first, through: last, by: interval) {
+            
+            // Find highest power of "factor" that divides n
+            var power = 0;
+            while (n % factor == 0) {
+                n = n / factor;
+                power = power + 1;
             }
-          }
+            
+            // If only factor^1 divides n (not higher powers),
+            // then return false
+            if (power == 1) {
+                return false;
+            }
+        }
         
-          // n must be 1 now if it is not a prime numenr.
-          // Since prime numbers are not powerful, we return
-          // false if n is not 1.
-          return (n == 1);
+        // n must be 1 now if it is not a prime numenr.
+        // Since prime numbers are not powerful, we return
+        // false if n is not 1.
+        return (n == 1);
     }
 }
 

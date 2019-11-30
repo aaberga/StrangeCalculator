@@ -13,12 +13,12 @@ import XCTest
 
 class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
     
-    // Properties
+    // MARK: Properties
     
     var coordinator: MainCoordinator?
     
     
-    // Setup
+    // MARK: - Setup
     
     override func setUp() {
         
@@ -26,10 +26,14 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
         self.coordinator = MainCoordinator(mainController: self)
     }
     
-    //    override func tearDown() {}
+    override func tearDown() {
+        
+        super.tearDown()
+        self.coordinator = nil
+    }
     
     
-    // MainDisplayView Protocol
+    // MARK: - MainDisplayView Protocol Methods
     
     func clearDisplay() {
         
@@ -64,8 +68,11 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
     }
     
     
-    // Tests
+    // MARK: - Tests
     
+    
+    // MARK: • ResetDisplay
+
     func testClear() {
         
         let testKey = "testClear"
@@ -87,6 +94,9 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
         waitForExpectations(timeout: 1) { error in
         }
     }
+    
+    
+    // MARK: • Powerful
     
     func testPowerful() {
         
@@ -150,6 +160,213 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
     }
     
     
+    
+    func testPowerful_3() {
+        
+        let testKey = "testPowerful_1"
+        let expectationGuard = self.expectation(description: testKey)
+        
+        self.testResponse?.testKey = testKey
+        self.testResponse?.expectation = expectationGuard
+        
+        self.testResponse?.responseActions[testKey] = { (result: Any?, error: Error?) in
+            
+            if let error = error {
+                
+                XCTFail("Error in test/key: \(testKey): \(error)")
+                return
+            }
+            
+            if let result = result as? Bool {
+                
+                XCTAssert(result == true, "Failed to identify 1 as Powerful Number!!")
+            }
+        }
+        
+        if let coordinator = self.coordinator  {
+            
+            self.testResponse?.expectation = expectationGuard
+            coordinator.isNumberPowerful("3")
+        }
+        
+        // *********************************
+        
+        waitForExpectations(timeout: 1) { error in
+        }
+    }
+    
+    func testPowerful_5() {
+        
+        let testKey = "testPowerful_5"
+        let expectationGuard = self.expectation(description: testKey)
+        
+        self.testResponse?.testKey = testKey
+        self.testResponse?.expectation = expectationGuard
+        
+        self.testResponse?.responseActions[testKey] = { (result: Any?, error: Error?) in
+            
+            if let error = error {
+                
+                XCTFail("Error in test/key: \(testKey): \(error)")
+                return
+            }
+            
+            if let result = result as? Bool {
+                
+                XCTAssert(result == true, "Failed to identify 1 as Powerful Number!!")
+            }
+        }
+        
+        if let coordinator = self.coordinator  {
+            
+            self.testResponse?.expectation = expectationGuard
+            coordinator.isNumberPowerful("5")
+        }
+        
+        // *********************************
+        
+        waitForExpectations(timeout: 1) { error in
+        }
+    }
+    
+    func testPowerful_20() {
+        
+        let testKey = "testPowerful_20"
+        let expectationGuard = self.expectation(description: testKey)
+        
+        self.testResponse?.testKey = testKey
+        self.testResponse?.expectation = expectationGuard
+        
+        self.testResponse?.responseActions[testKey] = { (result: Any?, error: Error?) in
+            
+            if let error = error {
+                
+                XCTFail("Error in test/key: \(testKey): \(error)")
+                return
+            }
+            
+            if let result = result as? Bool {
+                
+                XCTAssert(result == true, "Failed to identify 1 as Powerful Number!!")
+            }
+        }
+        
+        if let coordinator = self.coordinator  {
+            
+            coordinator.isNumberPowerful("20")
+        }
+        
+        // *********************************
+        
+        waitForExpectations(timeout: 1) { error in
+        }
+    }
+    
+    func testPowerful_27() {
+        
+        let testKey = "testPowerful_27"
+        let expectationGuard = self.expectation(description: testKey)
+        
+        self.testResponse?.testKey = testKey
+        self.testResponse?.expectation = expectationGuard
+        
+        self.testResponse?.responseActions[testKey] = { (result: Any?, error: Error?) in
+            
+            if let error = error {
+                
+                XCTFail("Error in test/key: \(testKey): \(error)")
+                return
+            }
+            
+            if let result = result as? Bool {
+                
+                XCTAssert(result == true, "Failed to identify 1 as Powerful Number!!")
+            }
+        }
+        
+        if let coordinator = self.coordinator  {
+            
+            self.testResponse?.expectation = expectationGuard
+            coordinator.isNumberPowerful("27")
+        }
+        
+        // *********************************
+        
+        waitForExpectations(timeout: 1) { error in
+        }
+    }
+
+    
+    func testPowerful_36() {
+        
+        let testKey = "testPowerful_36"
+        let expectationGuard = self.expectation(description: testKey)
+        
+        self.testResponse?.testKey = testKey
+        self.testResponse?.expectation = expectationGuard
+        
+        self.testResponse?.responseActions[testKey] = { (result: Any?, error: Error?) in
+            
+            if let error = error {
+                
+                XCTFail("Error in test/key: \(testKey): \(error)")
+                return
+            }
+            
+            if let result = result as? Bool {
+                
+                XCTAssert(result == true, "Failed to identify 1 as Powerful Number!!")
+            }
+        }
+        
+        if let coordinator = self.coordinator  {
+            
+            coordinator.isNumberPowerful("36")
+        }
+        
+        // *********************************
+        
+        waitForExpectations(timeout: 1) { error in
+        }
+    }
+
+    
+    func testPowerful_44() {
+        
+        let testKey = "testPowerful_44"
+        let expectationGuard = self.expectation(description: testKey)
+        
+        self.testResponse?.testKey = testKey
+        self.testResponse?.expectation = expectationGuard
+        
+        self.testResponse?.responseActions[testKey] = { (result: Any?, error: Error?) in
+            
+            if let error = error {
+                
+                XCTFail("Error in test/key: \(testKey): \(error)")
+                return
+            }
+            
+            if let result = result as? Bool {
+                
+                XCTAssert(result == true, "Failed to identify 1 as Powerful Number!!")
+            }
+        }
+        
+        if let coordinator = self.coordinator  {
+            
+            coordinator.isNumberPowerful("44")
+        }
+        
+        // *********************************
+        
+        waitForExpectations(timeout: 1) { error in
+        }
+    }
+    
+    
+    // MARK: • Complement
+    
     func testComplement() {
         
         let testKey = "testComplement"
@@ -157,6 +374,9 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
         
         self.testResponse?.testKey = testKey
         self.testResponse?.expectation = expectationGuard
+        
+        self.testResponse?.expectedResults[testKey] = 1.0
+        self.testResponse?.expectedErrors[testKey] = nil
         
         if let coordinator = self.coordinator  {
             
@@ -169,6 +389,8 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
         }
     }
     
+    
+    // MARK: • Factorial
     
     func testFactorial_1() {
         
@@ -223,7 +445,7 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
         
         self.testResponse?.testKey = testKey
         self.testResponse?.expectation = expectationGuard
-
+        
         self.testResponse?.responseActions[testKey] = { (result: Any?, error: Error?) in
             
             if let error = error {
@@ -250,7 +472,6 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
         }
     }
     
-    
     func testFactorial_8_withResponseAction() {
         
         let testKey = "testFactorial_8_withResponseAction"
@@ -258,7 +479,7 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
         
         self.testResponse?.testKey = testKey
         self.testResponse?.expectation = expectationGuard
-
+        
         self.testResponse?.responseActions[testKey] = { (result: Any?, error: Error?) in
             
             if let error = error {
@@ -284,13 +505,43 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
         waitForExpectations(timeout: 1) { error in
         }
     }
-
-    //
-    //    func testPerformanceExample() {
-    //        // This is an example of a performance test case.
-    //        self.measure {
-    //            // Put the code you want to measure the time of here.
-    //        }
-    //    }
     
+    // MARK: - Performance Example
+    
+    func testPerformanceExample() {
+        
+        self.measure {
+            
+            let testKey = "testFactorial_8_testPerformanceExample"
+            let expectationGuard = self.expectation(description: testKey)
+            
+            self.testResponse?.testKey = testKey
+            self.testResponse?.expectation = expectationGuard
+            
+            self.testResponse?.responseActions[testKey] = { (result: Any?, error: Error?) in
+                
+                if let error = error {
+                    
+                    XCTFail("Error in test/key: \(testKey): \(error)")
+                    return
+                }
+                
+                if let result = result as? Double {
+                    
+                    XCTAssert(result == 40320.0, "Failed to calculate 120 as (8!)...; got <\(result)>")
+                    self.testResponse?.expectation?.fulfill()
+                }
+            }
+            
+            if let coordinator = self.coordinator  {
+                
+                coordinator.calculateFactorial("8")
+            }
+        }
+        
+        // *********************************
+        
+        waitForExpectations(timeout: 1) { error in
+        }
+    }
 }
