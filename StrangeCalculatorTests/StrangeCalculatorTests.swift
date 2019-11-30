@@ -156,14 +156,11 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
     }
     
     
-    
-    
     // MARK: • Powerful
     
-
     func testPowerful_3() {
         
-        let testKey = "testPowerful_1"
+        let testKey = "testPowerful_3"
         let expectationGuard = self.expectation(description: testKey)
         
         self.testResponse?.testKey = testKey
@@ -179,7 +176,7 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
             
             if let result = result as? Bool {
                 
-                XCTAssert(result == true, "Failed to identify 1 as Powerful Number!!")
+                XCTAssert(result == true, "Failed to identify 3 as Powerful Number!!")
             }
         }
         
@@ -213,7 +210,7 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
             
             if let result = result as? Bool {
                 
-                XCTAssert(result == true, "Failed to identify 1 as Powerful Number!!")
+                XCTAssert(result == true, "Failed to identify 5 as Powerful Number!!")
             }
         }
         
@@ -247,7 +244,7 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
             
             if let result = result as? Bool {
                 
-                XCTAssert(result == true, "Failed to identify 1 as Powerful Number!!")
+                XCTAssert(result == true, "Failed to identify 20 as Powerful Number!!")
             }
         }
         
@@ -280,7 +277,7 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
             
             if let result = result as? Bool {
                 
-                XCTAssert(result == true, "Failed to identify 1 as Powerful Number!!")
+                XCTAssert(result == true, "Failed to identify 27 as Powerful Number!!")
             }
         }
         
@@ -295,7 +292,6 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
         waitForExpectations(timeout: 1) { error in
         }
     }
-
     
     func testPowerful_36() {
         
@@ -315,7 +311,7 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
             
             if let result = result as? Bool {
                 
-                XCTAssert(result == true, "Failed to identify 1 as Powerful Number!!")
+                XCTAssert(result == true, "Failed to identify 36 as Powerful Number!!")
             }
         }
         
@@ -330,7 +326,6 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
         }
     }
 
-    
     func testPowerful_44() {
         
         let testKey = "testPowerful_44"
@@ -349,7 +344,7 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
             
             if let result = result as? Bool {
                 
-                XCTAssert(result == true, "Failed to identify 1 as Powerful Number!!")
+                XCTAssert(result == true, "Failed to identify 36 as Powerful Number!!")
             }
         }
         
@@ -375,7 +370,7 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
         self.testResponse?.testKey = testKey
         self.testResponse?.expectation = expectationGuard
         
-        self.testResponse?.expectedResults[testKey] = 1.0
+        self.testResponse?.expectedResults[testKey] = 1
         self.testResponse?.expectedErrors[testKey] = nil
         
         if let coordinator = self.coordinator  {
@@ -414,7 +409,6 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
         }
     }
     
-    
     func testFactorial_5() {
         
         let testKey = "testFactorial_5"
@@ -436,7 +430,6 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
         waitForExpectations(timeout: 1) { error in
         }
     }
-    
     
     func testFactorial_5_withResponseAction() {
         
@@ -505,6 +498,7 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
         waitForExpectations(timeout: 1) { error in
         }
     }
+    
     
     // MARK: - Performance Example
     

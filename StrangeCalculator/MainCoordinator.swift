@@ -12,19 +12,26 @@ import UIKit
 
 class MainCoordinator: Coordinator {
     
+    // MARK: Properties
+    
     var viewController: TargetView
+    
+    
+    // MARK: - Coordinator Interface
     
     func start() {
         
         self.resetDisplay()
     }
     
+    // MARK: - Life Cycle
+    
     init(mainController: TargetView) {
         
         self.viewController = mainController
     }
     
-    // Helpers
+    // MARK: - Helpers
     
     func resetDisplay() {
         
@@ -35,7 +42,8 @@ class MainCoordinator: Coordinator {
     }
     
     
-    // Logical Interface Methods
+    
+    // MARK: - Logical Interface Methods
     
     func powerfulNumbers(from inputStart: String?, to inputEnd: String?) {
         
@@ -57,8 +65,25 @@ class MainCoordinator: Coordinator {
         }    }
     
     
+    /*
+     A complement of a number is defined as the inversion (if the bit value = 0, change it to 1 and vice-versa) of all bits of the number starting from the leftmost bit that is set to 1.
+     For example: If N = 5, N is represented as 101 in binary. The complement of N is 010, which is 2 in decimal notation. Similarly if N = 50, then the complement of N is 13.
+     Complete the function computeComplement:(int)N. This function accepts N as parameter. The function should return the complement of N.
+     */
     func calculateComplement(_ input: String?) {
         
+        if let input = input {
+            
+            if let integerInput = NSInteger(input) {
+                
+                let complement = self.complement(integerInput)
+                
+                if let view = self.viewController as? MainDisplayView {
+                    
+                    view.displayComplementResult(complement, error: nil)
+                }
+            }
+        }
     }
     
     
@@ -78,7 +103,7 @@ class MainCoordinator: Coordinator {
         }
     }
     
-    // Private Methods
+    // MARK: - Private Methods
     
     func factorial(_ input: Double) -> Double {
         
@@ -94,6 +119,11 @@ class MainCoordinator: Coordinator {
         }
     }
     
+    /* A powerful number is a positive integer m that for every prime number p dividing m, p*p also divides m. (a prime number (or a prime) is a natural number that has exactly two (distinct) natural number divisors, which are 1 and the prime number itself, the first prime numbers are: 2, 3, 5, 7, 11, 13, ...)
+     The first powerful numbers are: 1, 4, 8, 9, 16, 25, 27, 32, 36, ...
+     For example, 4 is a powerful number because all the primes that divide it (2 alone) also divide it when squared, and so forth.
+     Please implement this method to return the count of powerful numbers in the range [from..to] inclusively. */
+    /**/
     
     func numberIsPowerful(_ input: NSInteger) -> Bool {
         
@@ -142,7 +172,14 @@ class MainCoordinator: Coordinator {
         // false if n is not 1.
         return (n == 1);
     }
+    
+    
+    func complement(_ input: NSInteger) -> NSInteger {
+        
+        return 0
+    }
 }
+
 
 
 
