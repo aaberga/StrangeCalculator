@@ -516,7 +516,7 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
         
         let testKey = "testComplement_1"
         let expectationGuard = self.expectation(description: testKey)
-        let expectedResult = 1
+        let expectedResult = 0
 
         self.testResponse?.testKey = testKey
         self.testResponse?.expectation = expectationGuard
@@ -531,7 +531,7 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
             
             if let result = result as? NSInteger {
                 
-                XCTAssert(result == expectedResult, "Failed to calculate complement to 1!!")
+                XCTAssert(result == expectedResult, "Failed to calculate complement to 1!! Got: <\(result)>")
                 expectationGuard.fulfill()
             }
         }
@@ -551,7 +551,7 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
         
         let testKey = "testComplement_10"
         let expectationGuard = self.expectation(description: testKey)
-        let expectedResult = 10
+        let expectedResult = 5
 
         self.testResponse?.testKey = testKey
         self.testResponse?.expectation = expectationGuard
@@ -566,7 +566,7 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
             
             if let result = result as? NSInteger {
                 
-                XCTAssert(result == expectedResult, "Failed to calculate complement to 10!!")
+                XCTAssert(result == expectedResult, "Failed to calculate complement to 10!! Got: <\(result)>")
                 expectationGuard.fulfill()
             }
         }
@@ -586,7 +586,7 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
         
         let testKey = "testComplement_100"
         let expectationGuard = self.expectation(description: testKey)
-        let expectedResult = 100
+        let expectedResult = 27
 
         self.testResponse?.testKey = testKey
         self.testResponse?.expectation = expectationGuard
@@ -601,7 +601,7 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
             
             if let result = result as? NSInteger {
                 
-                XCTAssert(result == expectedResult, "Failed to calculate complement to 100!!")
+                XCTAssert(result == expectedResult, "Failed to calculate complement to 100!! Got: <\(result)>")
                 expectationGuard.fulfill()
             }
         }
@@ -616,8 +616,43 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
         waitForExpectations(timeout: 1) { error in
         }
     }
-    
 
+        
+    func testComplement_633() {
+        
+        let testKey = "testComplement_633"
+        let expectationGuard = self.expectation(description: testKey)
+        let expectedResult = 390
+
+        self.testResponse?.testKey = testKey
+        self.testResponse?.expectation = expectationGuard
+                
+        self.testResponse?.responseActions[testKey] = { (result: Any?, error: Error?) in
+            
+            if let error = error {
+                
+                XCTFail("Error in test/key: \(testKey): \(error)")
+                return
+            }
+            
+            if let result = result as? NSInteger {
+                
+                XCTAssert(result == expectedResult, "Failed to calculate complement to 633!! Got: <\(result)>")
+                expectationGuard.fulfill()
+            }
+        }
+
+        if let coordinator = self.coordinator  {
+            
+            coordinator.calculateComplement("633")
+        }
+        
+        // *********************************
+        
+        waitForExpectations(timeout: 1) { error in
+        }
+    }
+    
     // MARK: • Factorial
     
     func testFactorial_1() {

@@ -177,10 +177,14 @@ class MainCoordinator: Coordinator {
         return (n == 1)
     }
     
-    
+    // Adapted from: https://stackoverflow.com/questions/51595328/how-to-calculate-decimal-number-of-ones-compliment-in-swift
     func complement(_ input: NSInteger) -> NSInteger {
         
-        return 0
+        let binary = String(input, radix: 2)
+        let complement = String(binary.map { $0 == "0" ? "1" : "0" })
+        let result = Int(complement, radix: 2)!
+
+        return result
     }
 }
 
