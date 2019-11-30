@@ -19,6 +19,7 @@ protocol MainDisplayView: TargetView {
 class ViewController: UIViewController, MainDisplayView {
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
         mainCoordinator = MainCoordinator(mainController: self)
@@ -67,7 +68,7 @@ class ViewController: UIViewController, MainDisplayView {
     
     @IBAction func calculateFactorialNo(_ sender: Any) {
         
-        let numberInput = self.complementNoInput.text
+        let numberInput = self.factorialNoInput.text
         
         if let coordinator = self.mainCoordinator as? MainCoordinator {
             
@@ -91,17 +92,42 @@ class ViewController: UIViewController, MainDisplayView {
     
     func displayPowerfulResult(_ result: Bool, error: Error?) {
         
-        
+        if let error = error {
+            
+            self.powerfulNoOutput.text = error.localizedDescription
+            
+        } else if result {
+            
+            self.powerfulNoOutput.text = "Yes"
+            
+        } else {
+            
+            self.powerfulNoOutput.text = "No"
+        }
     }
     
     func displayComplementResult(_ result: NSInteger, error: Error?) {
         
-        
+        if let error = error {
+            
+            self.complementNoOutput.text = error.localizedDescription
+            
+        } else {
+            
+            self.complementNoOutput.text = "\(result)"
+        }
     }
     
     func displayFactorialResult(_ result: Double, error: Error?) {
         
-        
+        if let error = error {
+            
+            self.factorialNoOutput.text = error.localizedDescription
+            
+        } else {
+            
+            self.factorialNoOutput.text = "\(result)"
+        }
     }
 }
 

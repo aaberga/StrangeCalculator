@@ -249,6 +249,41 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
         waitForExpectations(timeout: 1) { error in
         }
     }
+    
+    
+    func testFactorial_8_withResponseAction() {
+        
+        let testKey = "testFactorial_8_withResponseAction"
+        let expectationGuard = self.expectation(description: testKey)
+        
+        self.testResponse?.testKey = testKey
+        self.testResponse?.expectation = expectationGuard
+
+        self.testResponse?.responseActions[testKey] = { (result: Any?, error: Error?) in
+            
+            if let error = error {
+                
+                XCTFail("Error in test/key: \(testKey): \(error)")
+                return
+            }
+            
+            if let result = result as? Double {
+                
+                XCTAssert(result == 40320.0, "Failed to calculate 120 as (8!)...; got <\(result)>")
+                self.testResponse?.expectation?.fulfill()
+            }
+        }
+        
+        if let coordinator = self.coordinator  {
+            
+            coordinator.calculateFactorial("8")
+        }
+        
+        // *********************************
+        
+        waitForExpectations(timeout: 1) { error in
+        }
+    }
 
     //
     //    func testPerformanceExample() {
