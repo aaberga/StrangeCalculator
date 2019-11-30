@@ -24,7 +24,11 @@ class ViewController: UIViewController, MainDisplayView {
 
         mainCoordinator = MainCoordinator(mainController: self)
         mainCoordinator?.start()
+        
+//        let keyboardScrollerView = KeyboardScrollerView()
+        //keyboardScrollerView.embedInScroller(self.view)
     }
+
 
     // Private Properties
     
