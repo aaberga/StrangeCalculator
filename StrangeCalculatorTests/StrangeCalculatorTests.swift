@@ -136,9 +136,7 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
             if let result = result as? Bool {
                 
                 XCTAssert(result == true, "Failed to identify 1 as Powerful Number!!")
-                if result == true {
-                    expectationGuard.fulfill()
-                }
+                expectationGuard.fulfill()
             }
         }
         
@@ -164,7 +162,8 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
         
         let testKey = "testPowerful_3"
         let expectationGuard = self.expectation(description: testKey)
-        
+        let expectedResult = false
+
         self.testResponse?.testKey = testKey
         self.testResponse?.expectation = expectationGuard
         
@@ -178,10 +177,8 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
             
             if let result = result as? Bool {
                 
-                XCTAssert(result == false, "Failed to identify 3 as non Powerful Number!!")
-                if result == false {
-                    expectationGuard.fulfill()
-                }
+                XCTAssert(result == expectedResult, "Failed to identify 3 as non Powerful Number!!")
+                expectationGuard.fulfill()
             }
         }
         
@@ -201,7 +198,8 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
         
         let testKey = "testPowerful_5"
         let expectationGuard = self.expectation(description: testKey)
-        
+        let expectedResult = false
+
         self.testResponse?.testKey = testKey
         self.testResponse?.expectation = expectationGuard
         
@@ -215,10 +213,8 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
             
             if let result = result as? Bool {
                 
-                XCTAssert(result == false, "Failed to identify 5 as non Powerful Number!!")
-                if result == false {
-                    expectationGuard.fulfill()
-                }
+                XCTAssert(result == expectedResult, "Failed to identify 5 as non Powerful Number!!")
+                expectationGuard.fulfill()
             }
         }
         
@@ -238,7 +234,8 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
         
         let testKey = "testPowerful_20"
         let expectationGuard = self.expectation(description: testKey)
-        
+        let expectedResult = false
+
         self.testResponse?.testKey = testKey
         self.testResponse?.expectation = expectationGuard
         
@@ -252,10 +249,8 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
             
             if let result = result as? Bool {
                 
-                XCTAssert(result == false, "Failed to identify 20 as non Powerful Number!!")
-                if result == false {
-                    expectationGuard.fulfill()
-                }
+                XCTAssert(result == expectedResult, "Failed to identify 20 as non Powerful Number!!")
+                expectationGuard.fulfill()
             }
         }
         
@@ -274,7 +269,8 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
         
         let testKey = "testPowerful_27"
         let expectationGuard = self.expectation(description: testKey)
-        
+        let expectedResult = true
+
         self.testResponse?.testKey = testKey
         self.testResponse?.expectation = expectationGuard
         
@@ -288,10 +284,8 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
             
             if let result = result as? Bool {
                 
-                XCTAssert(result == true, "Failed to identify 36 as Powerful Number!!")
-                if result == true {
-                    expectationGuard.fulfill()
-                }
+                XCTAssert(result == expectedResult, "Failed to identify 36 as Powerful Number!!")
+                expectationGuard.fulfill()
             }
         }
         
@@ -310,7 +304,8 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
         
         let testKey = "testPowerful_36"
         let expectationGuard = self.expectation(description: testKey)
-        
+        let expectedResult = true
+
         self.testResponse?.testKey = testKey
         self.testResponse?.expectation = expectationGuard
         
@@ -324,10 +319,8 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
             
             if let result = result as? Bool {
                 
-                XCTAssert(result == true, "Failed to identify 36 as Powerful Number!!")
-                if result == true {
-                    expectationGuard.fulfill()
-                }
+                XCTAssert(result == expectedResult, "Failed to identify 36 as Powerful Number!!")
+                expectationGuard.fulfill()
             }
         }
         
@@ -346,7 +339,8 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
         
         let testKey = "testPowerful_44"
         let expectationGuard = self.expectation(description: testKey)
-        
+        let expectedResult = false
+
         self.testResponse?.testKey = testKey
         self.testResponse?.expectation = expectationGuard
         
@@ -360,10 +354,8 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
             
             if let result = result as? Bool {
                 
-                XCTAssert(result == false, "Failed to identify 44 as non Powerful Number!!")
-                if result == false {
-                    expectationGuard.fulfill()
-                }
+                XCTAssert(result == expectedResult, "Failed to identify 44 as non Powerful Number!!")
+                expectationGuard.fulfill()
             }
         }
         
@@ -377,21 +369,173 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
         waitForExpectations(timeout: 1) { error in
         }
     }
-    
-    
-    // MARK: • Complement
-    
-    func testComplement() {
+
+    func testPowerful_45() {
         
-        let testKey = "testComplement"
+        let testKey = "testPowerful_45"
         let expectationGuard = self.expectation(description: testKey)
-        
+        let expectedResult = false
+
         self.testResponse?.testKey = testKey
         self.testResponse?.expectation = expectationGuard
         
-        self.testResponse?.expectedResults[testKey] = 1
-        self.testResponse?.expectedErrors[testKey] = nil
+        self.testResponse?.responseActions[testKey] = { (result: Any?, error: Error?) in
+            
+            if let error = error {
+                
+                XCTFail("Error in test/key: \(testKey): \(error)")
+                return
+            }
+            
+            if let result = result as? Bool {
+                
+                XCTAssert(result == expectedResult, "Failed to identify 45 as non Powerful Number!!")
+                expectationGuard.fulfill()
+            }
+        }
         
+        if let coordinator = self.coordinator  {
+            
+            coordinator.isNumberPowerful("45")
+        }
+        
+        // *********************************
+        
+        waitForExpectations(timeout: 1) { error in
+        }
+    }
+
+    func testPowerful_144() {
+        
+        let testKey = "testPowerful_144"
+        let expectationGuard = self.expectation(description: testKey)
+        let expectedResult = true
+
+        self.testResponse?.testKey = testKey
+        self.testResponse?.expectation = expectationGuard
+        
+        self.testResponse?.responseActions[testKey] = { (result: Any?, error: Error?) in
+            
+            if let error = error {
+                
+                XCTFail("Error in test/key: \(testKey): \(error)")
+                return
+            }
+            
+            if let result = result as? Bool {
+                
+                XCTAssert(result == expectedResult, "Failed to identify 144 as non Powerful Number!!")
+                expectationGuard.fulfill()
+            }
+        }
+        
+        if let coordinator = self.coordinator  {
+            
+            coordinator.isNumberPowerful("144")
+        }
+        
+        // *********************************
+        
+        waitForExpectations(timeout: 1) { error in
+        }
+    }
+    
+    func testPowerful_625() {
+        
+        let testKey = "testPowerful_625"
+        let expectationGuard = self.expectation(description: testKey)
+        let expectedResult = true
+
+        self.testResponse?.testKey = testKey
+        self.testResponse?.expectation = expectationGuard
+        
+        self.testResponse?.responseActions[testKey] = { (result: Any?, error: Error?) in
+            
+            if let error = error {
+                
+                XCTFail("Error in test/key: \(testKey): \(error)")
+                return
+            }
+            
+            if let result = result as? Bool {
+                
+                XCTAssert(result == expectedResult, "Failed to identify 625 as non Powerful Number!!")
+                expectationGuard.fulfill()
+            }
+        }
+        
+        if let coordinator = self.coordinator  {
+            
+            coordinator.isNumberPowerful("625")
+        }
+        
+        // *********************************
+        
+        waitForExpectations(timeout: 1) { error in
+        }
+    }
+
+    func testPowerful_626() {
+        
+        let testKey = "testPowerful_626"
+        let expectationGuard = self.expectation(description: testKey)
+        let expectedResult = false
+
+        self.testResponse?.testKey = testKey
+        self.testResponse?.expectation = expectationGuard
+        
+        self.testResponse?.responseActions[testKey] = { (result: Any?, error: Error?) in
+            
+            if let error = error {
+                
+                XCTFail("Error in test/key: \(testKey): \(error)")
+                return
+            }
+            
+            if let result = result as? Bool {
+                
+                XCTAssert(result == expectedResult, "Failed to identify 626 as non Powerful Number!!")
+                expectationGuard.fulfill()
+            }
+        }
+        
+        if let coordinator = self.coordinator  {
+            
+            coordinator.isNumberPowerful("626")
+        }
+        
+        // *********************************
+        
+        waitForExpectations(timeout: 1) { error in
+        }
+    }
+
+    // MARK: • Complement
+    
+    func testComplement_1() {
+        
+        let testKey = "testComplement_1"
+        let expectationGuard = self.expectation(description: testKey)
+        let expectedResult = 1
+
+        self.testResponse?.testKey = testKey
+        self.testResponse?.expectation = expectationGuard
+                
+        self.testResponse?.responseActions[testKey] = { (result: Any?, error: Error?) in
+            
+            if let error = error {
+                
+                XCTFail("Error in test/key: \(testKey): \(error)")
+                return
+            }
+            
+            if let result = result as? NSInteger {
+                
+                XCTAssert(result == expectedResult, "Failed to calculate complement to 1!!")
+                expectationGuard.fulfill()
+            }
+        }
+
         if let coordinator = self.coordinator  {
             
             coordinator.calculateComplement("1")
@@ -402,19 +546,90 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
         waitForExpectations(timeout: 1) { error in
         }
     }
+        
+    func testComplement_10() {
+        
+        let testKey = "testComplement_10"
+        let expectationGuard = self.expectation(description: testKey)
+        let expectedResult = 10
+
+        self.testResponse?.testKey = testKey
+        self.testResponse?.expectation = expectationGuard
+                
+        self.testResponse?.responseActions[testKey] = { (result: Any?, error: Error?) in
+            
+            if let error = error {
+                
+                XCTFail("Error in test/key: \(testKey): \(error)")
+                return
+            }
+            
+            if let result = result as? NSInteger {
+                
+                XCTAssert(result == expectedResult, "Failed to calculate complement to 10!!")
+                expectationGuard.fulfill()
+            }
+        }
+
+        if let coordinator = self.coordinator  {
+            
+            coordinator.calculateComplement("10")
+        }
+        
+        // *********************************
+        
+        waitForExpectations(timeout: 1) { error in
+        }
+    }
+        
+    func testComplement_100() {
+        
+        let testKey = "testComplement_100"
+        let expectationGuard = self.expectation(description: testKey)
+        let expectedResult = 100
+
+        self.testResponse?.testKey = testKey
+        self.testResponse?.expectation = expectationGuard
+                
+        self.testResponse?.responseActions[testKey] = { (result: Any?, error: Error?) in
+            
+            if let error = error {
+                
+                XCTFail("Error in test/key: \(testKey): \(error)")
+                return
+            }
+            
+            if let result = result as? NSInteger {
+                
+                XCTAssert(result == expectedResult, "Failed to calculate complement to 100!!")
+                expectationGuard.fulfill()
+            }
+        }
+
+        if let coordinator = self.coordinator  {
+            
+            coordinator.calculateComplement("100")
+        }
+        
+        // *********************************
+        
+        waitForExpectations(timeout: 1) { error in
+        }
+    }
     
-    
+
     // MARK: • Factorial
     
     func testFactorial_1() {
         
         let testKey = "testFactorial_1"
         let expectationGuard = self.expectation(description: testKey)
-        
+        let expectedResult = 1
+
         self.testResponse?.testKey = testKey
         self.testResponse?.expectation = expectationGuard
         
-        self.testResponse?.expectedResults[testKey] = 1.0
+        self.testResponse?.expectedResults[testKey] = expectedResult
         self.testResponse?.expectedErrors[testKey] = nil
         
         if let coordinator = self.coordinator  {
@@ -432,11 +647,12 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
         
         let testKey = "testFactorial_5"
         let expectationGuard = self.expectation(description: testKey)
-        
+        let expectedResult = 120.0
+
         self.testResponse?.testKey = testKey
         self.testResponse?.expectation = expectationGuard
         
-        self.testResponse?.expectedResults[testKey] = 120.0
+        self.testResponse?.expectedResults[testKey] = expectedResult
         self.testResponse?.expectedErrors[testKey] = nil
         
         if let coordinator = self.coordinator  {
@@ -454,7 +670,8 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
         
         let testKey = "testFactorial_5_withResponseAction"
         let expectationGuard = self.expectation(description: testKey)
-        
+        let expectedResult = 120.0
+
         self.testResponse?.testKey = testKey
         self.testResponse?.expectation = expectationGuard
         
@@ -468,7 +685,7 @@ class StrangeCalculatorTests: TargetViewTestCase, MainDisplayView {
             
             if let result = result as? Double {
                 
-                XCTAssert(result == 120.0, "Failed to calculate 120 as (5!)...")
+                XCTAssert(result == expectedResult, "Failed to calculate 120 as (5!)...")
                 self.testResponse?.expectation?.fulfill()
             }
         }
