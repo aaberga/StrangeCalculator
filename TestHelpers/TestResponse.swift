@@ -8,7 +8,7 @@
 
 import XCTest
 
-@testable import CoordinatorSample
+@testable import FXWorld
 
 typealias TestKey = String
 typealias ResultActionType = (_ result: Any?, _ error: Error?) -> Void

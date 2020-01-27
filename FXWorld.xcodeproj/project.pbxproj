@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B0CD0E523DF542700330C78 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1B0CD0E223DF542600330C78 /* README.md */; };
+		1B0CD0E723DF545700330C78 /* dashboard_example_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 1B0CD0E023DF542600330C78 /* dashboard_example_response.json */; };
+		1B0CD0E823DF545700330C78 /* markets_example_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 1B0CD0E123DF542600330C78 /* markets_example_response.json */; };
+		1B0CD0E923DF545B00330C78 /* dashboard_example_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 1B0CD0E023DF542600330C78 /* dashboard_example_response.json */; };
+		1B0CD0EA23DF545B00330C78 /* markets_example_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 1B0CD0E123DF542600330C78 /* markets_example_response.json */; };
 		1B6BE54323DF14D600530D5E /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6BE54223DF14D600530D5E /* SampleViewController.swift */; };
 		1B6BE54523DF176500530D5E /* SampleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6BE54423DF176500530D5E /* SampleCoordinator.swift */; };
-		1B6BE54723DF17CE00530D5E /* CoordinatorSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6BE54623DF17CE00530D5E /* CoordinatorSampleTests.swift */; };
+		1B6BE54723DF17CE00530D5E /* FXWorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6BE54623DF17CE00530D5E /* FXWorldTests.swift */; };
 		1B6BE54923DF4E3600530D5E /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6BE54823DF4E3600530D5E /* Service.swift */; };
 		1B6BE54B23DF4FB700530D5E /* SampleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6BE54A23DF4FB700530D5E /* SampleService.swift */; };
 		1B8C3B8D23916BAA00A12D6E /* TestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8C3B8B23916BAA00A12D6E /* TestResponse.swift */; };
@@ -19,8 +24,12 @@
 		1BE0D7BF238D608000702CFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BE0D7BD238D608000702CFE /* Main.storyboard */; };
 		1BE0D7C1238D608200702CFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BE0D7C0238D608200702CFE /* Assets.xcassets */; };
 		1BE0D7C4238D608200702CFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BE0D7C2238D608200702CFE /* LaunchScreen.storyboard */; };
-		1BE0D7DA238D608300702CFE /* CoordinatorSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0D7D9238D608300702CFE /* CoordinatorSampleUITests.swift */; };
+		1BE0D7DA238D608300702CFE /* FXWorldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0D7D9238D608300702CFE /* FXWorldUITests.swift */; };
 		1BE0D7E9238D643B00702CFE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0D7E8238D643B00702CFE /* Coordinator.swift */; };
+		1BEA6CB323DF59DB0066F848 /* FXWorldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA6CB223DF59DB0066F848 /* FXWorldViewController.swift */; };
+		1BEA6CB523DF5A030066F848 /* FXWorldCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA6CB423DF5A030066F848 /* FXWorldCoordinator.swift */; };
+		1BEA6CB823DF5CE10066F848 /* DailyFXService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA6CB723DF5CE10066F848 /* DailyFXService.swift */; };
+		1BEA6CBB23DF5DB40066F848 /* FXModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA6CBA23DF5DB40066F848 /* FXModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,26 +50,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1B6BE54223DF14D600530D5E /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
-		1B6BE54423DF176500530D5E /* SampleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCoordinator.swift; sourceTree = "<group>"; };
-		1B6BE54623DF17CE00530D5E /* CoordinatorSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorSampleTests.swift; sourceTree = "<group>"; };
+		1B0CD0E023DF542600330C78 /* dashboard_example_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dashboard_example_response.json; sourceTree = "<group>"; };
+		1B0CD0E123DF542600330C78 /* markets_example_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = markets_example_response.json; sourceTree = "<group>"; };
+		1B0CD0E223DF542600330C78 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1B6BE54223DF14D600530D5E /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SampleViewController.swift; path = ../SampleViewController.swift; sourceTree = "<group>"; };
+		1B6BE54423DF176500530D5E /* SampleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SampleCoordinator.swift; path = ../SampleCoordinator.swift; sourceTree = "<group>"; };
+		1B6BE54623DF17CE00530D5E /* FXWorldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXWorldTests.swift; sourceTree = "<group>"; };
 		1B6BE54823DF4E3600530D5E /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		1B6BE54A23DF4FB700530D5E /* SampleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleService.swift; sourceTree = "<group>"; };
 		1B8C3B8B23916BAA00A12D6E /* TestResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestResponse.swift; sourceTree = "<group>"; };
 		1B8C3B8C23916BAA00A12D6E /* TargetViewTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetViewTestCase.swift; sourceTree = "<group>"; };
-		1BE0D7B4238D608000702CFE /* CoordinatorSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoordinatorSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BE0D7B4238D608000702CFE /* FXWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FXWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BE0D7B7238D608000702CFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BE0D7B9238D608000702CFE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1BE0D7BE238D608000702CFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1BE0D7C0238D608200702CFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BE0D7C3238D608200702CFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1BE0D7C5238D608200702CFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1BE0D7CA238D608300702CFE /* CoordinatorSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoordinatorSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BE0D7CA238D608300702CFE /* FXWorldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FXWorldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BE0D7D0238D608300702CFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1BE0D7D5238D608300702CFE /* CoordinatorSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoordinatorSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1BE0D7D9238D608300702CFE /* CoordinatorSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorSampleUITests.swift; sourceTree = "<group>"; };
+		1BE0D7D5238D608300702CFE /* FXWorldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FXWorldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BE0D7D9238D608300702CFE /* FXWorldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXWorldUITests.swift; sourceTree = "<group>"; };
 		1BE0D7DB238D608300702CFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BE0D7E8238D643B00702CFE /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		1BEA6CB223DF59DB0066F848 /* FXWorldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXWorldViewController.swift; sourceTree = "<group>"; };
+		1BEA6CB423DF5A030066F848 /* FXWorldCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXWorldCoordinator.swift; sourceTree = "<group>"; };
+		1BEA6CB723DF5CE10066F848 /* DailyFXService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyFXService.swift; sourceTree = "<group>"; };
+		1BEA6CBA23DF5DB40066F848 /* FXModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +104,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B0CD0DF23DF540E00330C78 /* Code Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				1B0CD0E223DF542600330C78 /* README.md */,
+			);
+			path = "Code Challenge";
+			sourceTree = "<group>";
+		};
+		1B0CD0E623DF544200330C78 /* Code Challenge Data */ = {
+			isa = PBXGroup;
+			children = (
+				1B0CD0E023DF542600330C78 /* dashboard_example_response.json */,
+				1B0CD0E123DF542600330C78 /* markets_example_response.json */,
+			);
+			path = "Code Challenge Data";
+			sourceTree = "<group>";
+		};
 		1B8C3B8A23916BAA00A12D6E /* TestHelpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,11 +133,12 @@
 		1BE0D7AB238D608000702CFE = {
 			isa = PBXGroup;
 			children = (
+				1B0CD0DF23DF540E00330C78 /* Code Challenge */,
 				1BE0D7E7238D636500702CFE /* AppArchitecture */,
-				1BE0D7B6238D608000702CFE /* CoordinatorSample */,
+				1BE0D7B6238D608000702CFE /* FXWorld */,
 				1B8C3B8A23916BAA00A12D6E /* TestHelpers */,
-				1BE0D7CD238D608300702CFE /* CoordinatorSampleTests */,
-				1BE0D7D8238D608300702CFE /* CoordinatorSampleUITests */,
+				1BE0D7CD238D608300702CFE /* FXWorldTests */,
+				1BE0D7D8238D608300702CFE /* FXWorldUITests */,
 				1BE0D7B5238D608000702CFE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,45 +146,47 @@
 		1BE0D7B5238D608000702CFE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1BE0D7B4238D608000702CFE /* CoordinatorSample.app */,
-				1BE0D7CA238D608300702CFE /* CoordinatorSampleTests.xctest */,
-				1BE0D7D5238D608300702CFE /* CoordinatorSampleUITests.xctest */,
+				1BE0D7B4238D608000702CFE /* FXWorld.app */,
+				1BE0D7CA238D608300702CFE /* FXWorldTests.xctest */,
+				1BE0D7D5238D608300702CFE /* FXWorldUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1BE0D7B6238D608000702CFE /* CoordinatorSample */ = {
+		1BE0D7B6238D608000702CFE /* FXWorld */ = {
 			isa = PBXGroup;
 			children = (
+				1BEA6CB123DF59A50066F848 /* Sample_Code */,
+				1BEA6CB023DF595C0066F848 /* MainScreen */,
+				1BEA6CB623DF5CA40066F848 /* DailyFX_API */,
+				1BEA6CB923DF5D8B0066F848 /* FXModels */,
 				1BE0D7B7238D608000702CFE /* AppDelegate.swift */,
 				1BE0D7B9238D608000702CFE /* SceneDelegate.swift */,
-				1B6BE54223DF14D600530D5E /* SampleViewController.swift */,
-				1B6BE54423DF176500530D5E /* SampleCoordinator.swift */,
 				1BE0D7BD238D608000702CFE /* Main.storyboard */,
 				1BE0D7C0238D608200702CFE /* Assets.xcassets */,
 				1BE0D7C2238D608200702CFE /* LaunchScreen.storyboard */,
 				1BE0D7C5238D608200702CFE /* Info.plist */,
-				1B6BE54A23DF4FB700530D5E /* SampleService.swift */,
 			);
-			path = CoordinatorSample;
+			path = FXWorld;
 			sourceTree = "<group>";
 		};
-		1BE0D7CD238D608300702CFE /* CoordinatorSampleTests */ = {
+		1BE0D7CD238D608300702CFE /* FXWorldTests */ = {
 			isa = PBXGroup;
 			children = (
-				1B6BE54623DF17CE00530D5E /* CoordinatorSampleTests.swift */,
+				1B0CD0E623DF544200330C78 /* Code Challenge Data */,
+				1B6BE54623DF17CE00530D5E /* FXWorldTests.swift */,
 				1BE0D7D0238D608300702CFE /* Info.plist */,
 			);
-			path = CoordinatorSampleTests;
+			path = FXWorldTests;
 			sourceTree = "<group>";
 		};
-		1BE0D7D8238D608300702CFE /* CoordinatorSampleUITests */ = {
+		1BE0D7D8238D608300702CFE /* FXWorldUITests */ = {
 			isa = PBXGroup;
 			children = (
-				1BE0D7D9238D608300702CFE /* CoordinatorSampleUITests.swift */,
+				1BE0D7D9238D608300702CFE /* FXWorldUITests.swift */,
 				1BE0D7DB238D608300702CFE /* Info.plist */,
 			);
-			path = CoordinatorSampleUITests;
+			path = FXWorldUITests;
 			sourceTree = "<group>";
 		};
 		1BE0D7E7238D636500702CFE /* AppArchitecture */ = {
@@ -162,12 +198,47 @@
 			path = AppArchitecture;
 			sourceTree = "<group>";
 		};
+		1BEA6CB023DF595C0066F848 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				1BEA6CB223DF59DB0066F848 /* FXWorldViewController.swift */,
+				1BEA6CB423DF5A030066F848 /* FXWorldCoordinator.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		1BEA6CB123DF59A50066F848 /* Sample_Code */ = {
+			isa = PBXGroup;
+			children = (
+				1B6BE54223DF14D600530D5E /* SampleViewController.swift */,
+				1B6BE54423DF176500530D5E /* SampleCoordinator.swift */,
+				1B6BE54A23DF4FB700530D5E /* SampleService.swift */,
+			);
+			path = Sample_Code;
+			sourceTree = "<group>";
+		};
+		1BEA6CB623DF5CA40066F848 /* DailyFX_API */ = {
+			isa = PBXGroup;
+			children = (
+				1BEA6CB723DF5CE10066F848 /* DailyFXService.swift */,
+			);
+			path = DailyFX_API;
+			sourceTree = "<group>";
+		};
+		1BEA6CB923DF5D8B0066F848 /* FXModels */ = {
+			isa = PBXGroup;
+			children = (
+				1BEA6CBA23DF5DB40066F848 /* FXModels.swift */,
+			);
+			path = FXModels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1BE0D7B3238D608000702CFE /* CoordinatorSample */ = {
+		1BE0D7B3238D608000702CFE /* FXWorld */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1BE0D7DE238D608300702CFE /* Build configuration list for PBXNativeTarget "CoordinatorSample" */;
+			buildConfigurationList = 1BE0D7DE238D608300702CFE /* Build configuration list for PBXNativeTarget "FXWorld" */;
 			buildPhases = (
 				1BE0D7B0238D608000702CFE /* Sources */,
 				1BE0D7B1238D608000702CFE /* Frameworks */,
@@ -177,14 +248,14 @@
 			);
 			dependencies = (
 			);
-			name = CoordinatorSample;
+			name = FXWorld;
 			productName = StrangeCalculator;
-			productReference = 1BE0D7B4238D608000702CFE /* CoordinatorSample.app */;
+			productReference = 1BE0D7B4238D608000702CFE /* FXWorld.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1BE0D7C9238D608300702CFE /* CoordinatorSampleTests */ = {
+		1BE0D7C9238D608300702CFE /* FXWorldTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1BE0D7E1238D608300702CFE /* Build configuration list for PBXNativeTarget "CoordinatorSampleTests" */;
+			buildConfigurationList = 1BE0D7E1238D608300702CFE /* Build configuration list for PBXNativeTarget "FXWorldTests" */;
 			buildPhases = (
 				1BE0D7C6238D608300702CFE /* Sources */,
 				1BE0D7C7238D608300702CFE /* Frameworks */,
@@ -195,14 +266,14 @@
 			dependencies = (
 				1BE0D7CC238D608300702CFE /* PBXTargetDependency */,
 			);
-			name = CoordinatorSampleTests;
+			name = FXWorldTests;
 			productName = StrangeCalculatorTests;
-			productReference = 1BE0D7CA238D608300702CFE /* CoordinatorSampleTests.xctest */;
+			productReference = 1BE0D7CA238D608300702CFE /* FXWorldTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		1BE0D7D4238D608300702CFE /* CoordinatorSampleUITests */ = {
+		1BE0D7D4238D608300702CFE /* FXWorldUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1BE0D7E4238D608300702CFE /* Build configuration list for PBXNativeTarget "CoordinatorSampleUITests" */;
+			buildConfigurationList = 1BE0D7E4238D608300702CFE /* Build configuration list for PBXNativeTarget "FXWorldUITests" */;
 			buildPhases = (
 				1BE0D7D1238D608300702CFE /* Sources */,
 				1BE0D7D2238D608300702CFE /* Frameworks */,
@@ -213,9 +284,9 @@
 			dependencies = (
 				1BE0D7D7238D608300702CFE /* PBXTargetDependency */,
 			);
-			name = CoordinatorSampleUITests;
+			name = FXWorldUITests;
 			productName = StrangeCalculatorUITests;
-			productReference = 1BE0D7D5238D608300702CFE /* CoordinatorSampleUITests.xctest */;
+			productReference = 1BE0D7D5238D608300702CFE /* FXWorldUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -241,7 +312,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1BE0D7AF238D608000702CFE /* Build configuration list for PBXProject "CoordinatorSample" */;
+			buildConfigurationList = 1BE0D7AF238D608000702CFE /* Build configuration list for PBXProject "FXWorld" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -254,9 +325,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1BE0D7B3238D608000702CFE /* CoordinatorSample */,
-				1BE0D7C9238D608300702CFE /* CoordinatorSampleTests */,
-				1BE0D7D4238D608300702CFE /* CoordinatorSampleUITests */,
+				1BE0D7B3238D608000702CFE /* FXWorld */,
+				1BE0D7C9238D608300702CFE /* FXWorldTests */,
+				1BE0D7D4238D608300702CFE /* FXWorldUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -266,6 +337,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B0CD0E523DF542700330C78 /* README.md in Resources */,
 				1BE0D7C4238D608200702CFE /* LaunchScreen.storyboard in Resources */,
 				1BE0D7C1238D608200702CFE /* Assets.xcassets in Resources */,
 				1BE0D7BF238D608000702CFE /* Main.storyboard in Resources */,
@@ -276,6 +348,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B0CD0E723DF545700330C78 /* dashboard_example_response.json in Resources */,
+				1B0CD0E823DF545700330C78 /* markets_example_response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +357,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B0CD0E923DF545B00330C78 /* dashboard_example_response.json in Resources */,
+				1B0CD0EA23DF545B00330C78 /* markets_example_response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,9 +369,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BEA6CBB23DF5DB40066F848 /* FXModels.swift in Sources */,
+				1BEA6CB523DF5A030066F848 /* FXWorldCoordinator.swift in Sources */,
 				1BE0D7E9238D643B00702CFE /* Coordinator.swift in Sources */,
 				1B6BE54323DF14D600530D5E /* SampleViewController.swift in Sources */,
+				1BEA6CB823DF5CE10066F848 /* DailyFXService.swift in Sources */,
 				1B6BE54523DF176500530D5E /* SampleCoordinator.swift in Sources */,
+				1BEA6CB323DF59DB0066F848 /* FXWorldViewController.swift in Sources */,
 				1BE0D7B8238D608000702CFE /* AppDelegate.swift in Sources */,
 				1BE0D7BA238D608000702CFE /* SceneDelegate.swift in Sources */,
 				1B6BE54923DF4E3600530D5E /* Service.swift in Sources */,
@@ -307,7 +387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B6BE54723DF17CE00530D5E /* CoordinatorSampleTests.swift in Sources */,
+				1B6BE54723DF17CE00530D5E /* FXWorldTests.swift in Sources */,
 				1B8C3B8D23916BAA00A12D6E /* TestResponse.swift in Sources */,
 				1B8C3B8E23916BAA00A12D6E /* TargetViewTestCase.swift in Sources */,
 			);
@@ -317,7 +397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BE0D7DA238D608300702CFE /* CoordinatorSampleUITests.swift in Sources */,
+				1BE0D7DA238D608300702CFE /* FXWorldUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,12 +406,12 @@
 /* Begin PBXTargetDependency section */
 		1BE0D7CC238D608300702CFE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1BE0D7B3238D608000702CFE /* CoordinatorSample */;
+			target = 1BE0D7B3238D608000702CFE /* FXWorld */;
 			targetProxy = 1BE0D7CB238D608300702CFE /* PBXContainerItemProxy */;
 		};
 		1BE0D7D7238D608300702CFE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1BE0D7B3238D608000702CFE /* CoordinatorSample */;
+			target = 1BE0D7B3238D608000702CFE /* FXWorld */;
 			targetProxy = 1BE0D7D6238D608300702CFE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -476,13 +556,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S5VWLM54JC;
-				INFOPLIST_FILE = CoordinatorSample/Info.plist;
+				INFOPLIST_FILE = FXWorld/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.ibat.other.tests;
-				PRODUCT_NAME = CoordinatorSample;
+				PRODUCT_NAME = FXWorld;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -494,13 +574,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S5VWLM54JC;
-				INFOPLIST_FILE = CoordinatorSample/Info.plist;
+				INFOPLIST_FILE = FXWorld/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.ibat.other.tests;
-				PRODUCT_NAME = CoordinatorSample;
+				PRODUCT_NAME = FXWorld;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -523,7 +603,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoordinatorSample.app/CoordinatorSample";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FXWorld.app/FXWorld";
 			};
 			name = Debug;
 		};
@@ -544,7 +624,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoordinatorSample.app/CoordinatorSample";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FXWorld.app/FXWorld";
 			};
 			name = Release;
 		};
@@ -563,7 +643,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CoordinatorSample;
+				TEST_TARGET_NAME = FXWorld;
 			};
 			name = Debug;
 		};
@@ -582,14 +662,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CoordinatorSample;
+				TEST_TARGET_NAME = FXWorld;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1BE0D7AF238D608000702CFE /* Build configuration list for PBXProject "CoordinatorSample" */ = {
+		1BE0D7AF238D608000702CFE /* Build configuration list for PBXProject "FXWorld" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1BE0D7DC238D608300702CFE /* Debug */,
@@ -598,7 +678,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1BE0D7DE238D608300702CFE /* Build configuration list for PBXNativeTarget "CoordinatorSample" */ = {
+		1BE0D7DE238D608300702CFE /* Build configuration list for PBXNativeTarget "FXWorld" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1BE0D7DF238D608300702CFE /* Debug */,
@@ -607,7 +687,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1BE0D7E1238D608300702CFE /* Build configuration list for PBXNativeTarget "CoordinatorSampleTests" */ = {
+		1BE0D7E1238D608300702CFE /* Build configuration list for PBXNativeTarget "FXWorldTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1BE0D7E2238D608300702CFE /* Debug */,
@@ -616,7 +696,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1BE0D7E4238D608300702CFE /* Build configuration list for PBXNativeTarget "CoordinatorSampleUITests" */ = {
+		1BE0D7E4238D608300702CFE /* Build configuration list for PBXNativeTarget "FXWorldUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1BE0D7E5238D608300702CFE /* Debug */,

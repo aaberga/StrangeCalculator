@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1BE0D7B3238D608000702CFE"
-               BuildableName = "CoordinatorSample.app"
-               BlueprintName = "CoordinatorSample"
-               ReferencedContainer = "container:CoordinatorSample.xcodeproj">
+               BuildableName = "FXWorld.app"
+               BlueprintName = "FXWorld"
+               ReferencedContainer = "container:FXWorld.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1BE0D7C9238D608300702CFE"
-               BuildableName = "CoordinatorSampleTests.xctest"
-               BlueprintName = "CoordinatorSampleTests"
-               ReferencedContainer = "container:CoordinatorSample.xcodeproj">
+               BuildableName = "FXWorldTests.xctest"
+               BlueprintName = "FXWorldTests"
+               ReferencedContainer = "container:FXWorld.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1BE0D7D4238D608300702CFE"
-               BuildableName = "CoordinatorSampleUITests.xctest"
-               BlueprintName = "CoordinatorSampleUITests"
-               ReferencedContainer = "container:CoordinatorSample.xcodeproj">
+               BuildableName = "FXWorldUITests.xctest"
+               BlueprintName = "FXWorldUITests"
+               ReferencedContainer = "container:FXWorld.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1BE0D7B3238D608000702CFE"
-            BuildableName = "CoordinatorSample.app"
-            BlueprintName = "CoordinatorSample"
-            ReferencedContainer = "container:CoordinatorSample.xcodeproj">
+            BuildableName = "FXWorld.app"
+            BlueprintName = "FXWorld"
+            ReferencedContainer = "container:FXWorld.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -82,9 +82,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1BE0D7B3238D608000702CFE"
-            BuildableName = "CoordinatorSample.app"
-            BlueprintName = "CoordinatorSample"
-            ReferencedContainer = "container:CoordinatorSample.xcodeproj">
+            BuildableName = "FXWorld.app"
+            BlueprintName = "FXWorld"
+            ReferencedContainer = "container:FXWorld.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

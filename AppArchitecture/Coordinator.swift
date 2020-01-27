@@ -3,7 +3,7 @@
 //  
 //
 //  Created by Aldo Bergamini on 19/09/2018.
-//  Copyright © 2018 iBat Inc. All rights reserved.
+//  Copyright © 2018 - 2019 iBat Inc. All rights reserved.
 //
 
 import Foundation

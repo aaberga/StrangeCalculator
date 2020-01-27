@@ -3,7 +3,7 @@
 //  CoordinatorSample
 //
 //  Created by Aldo Bergamini on 27/01/2020.
-//  Copyright © 2020 Frequency Communications. All rights reserved.
+//  Copyright © 2020 iBat Inc. All rights reserved.
 //
 
 import Foundation

@@ -3,7 +3,7 @@
 //  CoordinatorSample
 //
 //  Created by Aldo Bergamini on 26/11/2019.
-//  Copyright © 2019 Aldo Bergamini. All rights reserved.
+//  Copyright © 2018 - 2019 iBat Inc. All rights reserved.
 //
 
 import UIKit
