@@ -11,7 +11,6 @@ import XCTest
 @testable import CoordinatorSample
 
 typealias TestKey = String
-typealias ResultType = (result: Any?, error: Error?)
 typealias ResultActionType = (_ result: Any?, _ error: Error?) -> Void
 
 
