@@ -12,10 +12,8 @@
 		1B6BE54723DF17CE00530D5E /* CoordinatorSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6BE54623DF17CE00530D5E /* CoordinatorSampleTests.swift */; };
 		1B8C3B8D23916BAA00A12D6E /* TestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8C3B8B23916BAA00A12D6E /* TestResponse.swift */; };
 		1B8C3B8E23916BAA00A12D6E /* TargetViewTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8C3B8C23916BAA00A12D6E /* TargetViewTestCase.swift */; };
-		1BBBD8CB238D662C007A47F2 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBBD8CA238D662C007A47F2 /* MainCoordinator.swift */; };
 		1BE0D7B8238D608000702CFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0D7B7238D608000702CFE /* AppDelegate.swift */; };
 		1BE0D7BA238D608000702CFE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0D7B9238D608000702CFE /* SceneDelegate.swift */; };
-		1BE0D7BC238D608000702CFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0D7BB238D608000702CFE /* ViewController.swift */; };
 		1BE0D7BF238D608000702CFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BE0D7BD238D608000702CFE /* Main.storyboard */; };
 		1BE0D7C1238D608200702CFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BE0D7C0238D608200702CFE /* Assets.xcassets */; };
 		1BE0D7C4238D608200702CFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BE0D7C2238D608200702CFE /* LaunchScreen.storyboard */; };
@@ -46,11 +44,9 @@
 		1B6BE54623DF17CE00530D5E /* CoordinatorSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorSampleTests.swift; sourceTree = "<group>"; };
 		1B8C3B8B23916BAA00A12D6E /* TestResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestResponse.swift; sourceTree = "<group>"; };
 		1B8C3B8C23916BAA00A12D6E /* TargetViewTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetViewTestCase.swift; sourceTree = "<group>"; };
-		1BBBD8CA238D662C007A47F2 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		1BE0D7B4238D608000702CFE /* CoordinatorSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoordinatorSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BE0D7B7238D608000702CFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BE0D7B9238D608000702CFE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1BE0D7BB238D608000702CFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1BE0D7BE238D608000702CFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1BE0D7C0238D608200702CFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BE0D7C3238D608200702CFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -124,8 +120,6 @@
 			children = (
 				1BE0D7B7238D608000702CFE /* AppDelegate.swift */,
 				1BE0D7B9238D608000702CFE /* SceneDelegate.swift */,
-				1BE0D7BB238D608000702CFE /* ViewController.swift */,
-				1BBBD8CA238D662C007A47F2 /* MainCoordinator.swift */,
 				1B6BE54223DF14D600530D5E /* SampleViewController.swift */,
 				1B6BE54423DF176500530D5E /* SampleCoordinator.swift */,
 				1BE0D7BD238D608000702CFE /* Main.storyboard */,
@@ -295,10 +289,8 @@
 			files = (
 				1BE0D7E9238D643B00702CFE /* Coordinator.swift in Sources */,
 				1B6BE54323DF14D600530D5E /* SampleViewController.swift in Sources */,
-				1BE0D7BC238D608000702CFE /* ViewController.swift in Sources */,
 				1B6BE54523DF176500530D5E /* SampleCoordinator.swift in Sources */,
 				1BE0D7B8238D608000702CFE /* AppDelegate.swift in Sources */,
-				1BBBD8CB238D662C007A47F2 /* MainCoordinator.swift in Sources */,
 				1BE0D7BA238D608000702CFE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

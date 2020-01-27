@@ -57,6 +57,21 @@ class SampleCoordinator: Coordinator {
         }
     }
     
+    func doCalculationWithResult(_ input: String?) -> String {
+        
+        let resultString = "XXXXX"
+
+        if let _ = input {
+            
+            if let view = self.viewController as? SampleDisplayView {
+                
+                view.displayStringResult(resultString, error: nil)
+            }
+        }
+        
+        return resultString
+    }
+    
     private func randomBool(_ input: NSInteger) -> Bool {
         return arc4random_uniform(2) == 0
     }

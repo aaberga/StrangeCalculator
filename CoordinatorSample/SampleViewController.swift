@@ -13,11 +13,13 @@ protocol SampleDisplayView: TargetView {
     
     func clearDisplay ()
     func displayCalculationResult(_ result: Bool, error: Error?)
+    func displayStringResult(_ result: String, error: Error?)
 
 }
 
 
 class SampleViewController: UIViewController, SampleDisplayView {
+    
  
     // VC Life Cycle
 
@@ -52,6 +54,9 @@ class SampleViewController: UIViewController, SampleDisplayView {
 
     }
 
+    func displayStringResult(_ result: String, error: Error?) {
+
+    }
 
 
     /*

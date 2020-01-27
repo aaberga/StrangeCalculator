@@ -14,7 +14,6 @@ import XCTest
 
 class CoordinatorSampleTests: TargetViewTestCase, SampleDisplayView {
     
-    
     // MARK: Properties
     
     var coordinator: SampleCoordinator?
@@ -53,6 +52,13 @@ class CoordinatorSampleTests: TargetViewTestCase, SampleDisplayView {
         }
     }
 
+    func displayStringResult(_ result: String, error: Error?) {
+        
+        if let testResponse = self.testResponse {
+            
+            self.evaluateResponse(key: testResponse.testKey, response: (result: result, error: error))
+        }
+    }
     
     
     // MARK: - Tests
@@ -82,9 +88,9 @@ class CoordinatorSampleTests: TargetViewTestCase, SampleDisplayView {
     
     // MARK: • How To Use Test Injection
     
-    func testPowerful_ExpectedData() {
+    func testDoCalculation_ExpectedData() {
         
-        let testKey = "testPowerful_ExpectedData"
+        let testKey = "testDoCalculation_ExpectedData"
         let expectationGuard = self.expectation(description: testKey)
         
         self.testResponse?.testKey = testKey
@@ -104,9 +110,9 @@ class CoordinatorSampleTests: TargetViewTestCase, SampleDisplayView {
         }
     }
     
-    func testPowerful_withResponseAction() {
+    func testDoCalculation_withResponseAction() {
         
-        let testKey = "testPowerful_withResponseAction"
+        let testKey = "testDoCalculation_withResponseAction"
         let expectationGuard = self.expectation(description: testKey)
         
         self.testResponse?.testKey = testKey
@@ -129,7 +135,6 @@ class CoordinatorSampleTests: TargetViewTestCase, SampleDisplayView {
         
         self.testResponse?.responseActions[testKey] = closureName
         
-        
         if let coordinator = self.coordinator  {
             
             self.testResponse?.expectation = expectationGuard
@@ -151,7 +156,7 @@ class CoordinatorSampleTests: TargetViewTestCase, SampleDisplayView {
         
         self.measure {
             
-            let testKey = "testFactorial_8_testPerformanceExample"
+            let testKey = "testPerformanceExample"
             let expectationGuard = self.expectation(description: testKey)
             
             self.testResponse?.testKey = testKey
@@ -165,16 +170,16 @@ class CoordinatorSampleTests: TargetViewTestCase, SampleDisplayView {
                     return
                 }
                 
-                if let result = result as? Double {
+                if let result = result as? String {
                     
-                    XCTAssert(result == 40320.0, "Failed to calculate 120 as (8!)...; got <\(result)>")
+                    XCTAssert(result == "XXXX", "Failed to get result...; got <\(result)>")
                     self.testResponse?.expectation?.fulfill()
                 }
             }
             
             if let coordinator = self.coordinator  {
                 
-                coordinator.doCalculation("8")
+                coordinator.doCalculationWithResult("8")
             }
         }
         
