@@ -8,7 +8,7 @@
 
 import XCTest
 
-@testable import StrangeCalculator
+@testable import CoordinatorSample
 
 typealias TestKey = String
 typealias ResultType = (result: Any?, error: Error?)

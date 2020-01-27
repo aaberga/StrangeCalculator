@@ -1,6 +1,6 @@
 //
-//  StrangeCalculatorUITests.swift
-//  StrangeCalculatorUITests
+//  CoordinatorSampleUITests.swift
+//  CoordinatorSampleUITests
 //
 //  Created by Aldo Bergamini on 26/11/2019.
 //  Copyright © 2019 Aldo Bergamini. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class StrangeCalculatorUITests: XCTestCase {
+class CoordinatorSampleUITests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

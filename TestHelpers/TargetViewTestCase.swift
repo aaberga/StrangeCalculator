@@ -8,7 +8,7 @@
 
 import XCTest
 
-@testable import StrangeCalculator
+@testable import CoordinatorSample
 
  
 class TargetViewTestCase: XCTestCase, TargetView {

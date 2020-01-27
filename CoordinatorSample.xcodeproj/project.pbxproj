@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B6BE54323DF14D600530D5E /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6BE54223DF14D600530D5E /* SampleViewController.swift */; };
+		1B6BE54523DF176500530D5E /* SampleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6BE54423DF176500530D5E /* SampleCoordinator.swift */; };
+		1B6BE54723DF17CE00530D5E /* CoordinatorSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6BE54623DF17CE00530D5E /* CoordinatorSampleTests.swift */; };
 		1B8C3B8D23916BAA00A12D6E /* TestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8C3B8B23916BAA00A12D6E /* TestResponse.swift */; };
 		1B8C3B8E23916BAA00A12D6E /* TargetViewTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8C3B8C23916BAA00A12D6E /* TargetViewTestCase.swift */; };
 		1BBBD8CB238D662C007A47F2 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBBD8CA238D662C007A47F2 /* MainCoordinator.swift */; };
@@ -16,8 +19,7 @@
 		1BE0D7BF238D608000702CFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BE0D7BD238D608000702CFE /* Main.storyboard */; };
 		1BE0D7C1238D608200702CFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BE0D7C0238D608200702CFE /* Assets.xcassets */; };
 		1BE0D7C4238D608200702CFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BE0D7C2238D608200702CFE /* LaunchScreen.storyboard */; };
-		1BE0D7CF238D608300702CFE /* StrangeCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0D7CE238D608300702CFE /* StrangeCalculatorTests.swift */; };
-		1BE0D7DA238D608300702CFE /* StrangeCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0D7D9238D608300702CFE /* StrangeCalculatorUITests.swift */; };
+		1BE0D7DA238D608300702CFE /* CoordinatorSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0D7D9238D608300702CFE /* CoordinatorSampleUITests.swift */; };
 		1BE0D7E9238D643B00702CFE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0D7E8238D643B00702CFE /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,11 +41,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1B4AABF8238D9438004565B6 /* PowerfulNumber.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = PowerfulNumber.py; sourceTree = "<group>"; };
+		1B6BE54223DF14D600530D5E /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
+		1B6BE54423DF176500530D5E /* SampleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCoordinator.swift; sourceTree = "<group>"; };
+		1B6BE54623DF17CE00530D5E /* CoordinatorSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorSampleTests.swift; sourceTree = "<group>"; };
 		1B8C3B8B23916BAA00A12D6E /* TestResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestResponse.swift; sourceTree = "<group>"; };
 		1B8C3B8C23916BAA00A12D6E /* TargetViewTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetViewTestCase.swift; sourceTree = "<group>"; };
 		1BBBD8CA238D662C007A47F2 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
-		1BE0D7B4238D608000702CFE /* StrangeCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StrangeCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BE0D7B4238D608000702CFE /* CoordinatorSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoordinatorSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BE0D7B7238D608000702CFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BE0D7B9238D608000702CFE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1BE0D7BB238D608000702CFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,11 +55,10 @@
 		1BE0D7C0238D608200702CFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BE0D7C3238D608200702CFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1BE0D7C5238D608200702CFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1BE0D7CA238D608300702CFE /* StrangeCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StrangeCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1BE0D7CE238D608300702CFE /* StrangeCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrangeCalculatorTests.swift; sourceTree = "<group>"; };
+		1BE0D7CA238D608300702CFE /* CoordinatorSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoordinatorSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BE0D7D0238D608300702CFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1BE0D7D5238D608300702CFE /* StrangeCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StrangeCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1BE0D7D9238D608300702CFE /* StrangeCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrangeCalculatorUITests.swift; sourceTree = "<group>"; };
+		1BE0D7D5238D608300702CFE /* CoordinatorSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoordinatorSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BE0D7D9238D608300702CFE /* CoordinatorSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorSampleUITests.swift; sourceTree = "<group>"; };
 		1BE0D7DB238D608300702CFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BE0D7E8238D643B00702CFE /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,10 +101,10 @@
 			isa = PBXGroup;
 			children = (
 				1BE0D7E7238D636500702CFE /* AppArchitecture */,
-				1BE0D7B6238D608000702CFE /* StrangeCalculator */,
+				1BE0D7B6238D608000702CFE /* CoordinatorSample */,
 				1B8C3B8A23916BAA00A12D6E /* TestHelpers */,
-				1BE0D7CD238D608300702CFE /* StrangeCalculatorTests */,
-				1BE0D7D8238D608300702CFE /* StrangeCalculatorUITests */,
+				1BE0D7CD238D608300702CFE /* CoordinatorSampleTests */,
+				1BE0D7D8238D608300702CFE /* CoordinatorSampleUITests */,
 				1BE0D7B5238D608000702CFE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,45 +112,46 @@
 		1BE0D7B5238D608000702CFE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1BE0D7B4238D608000702CFE /* StrangeCalculator.app */,
-				1BE0D7CA238D608300702CFE /* StrangeCalculatorTests.xctest */,
-				1BE0D7D5238D608300702CFE /* StrangeCalculatorUITests.xctest */,
+				1BE0D7B4238D608000702CFE /* CoordinatorSample.app */,
+				1BE0D7CA238D608300702CFE /* CoordinatorSampleTests.xctest */,
+				1BE0D7D5238D608300702CFE /* CoordinatorSampleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1BE0D7B6238D608000702CFE /* StrangeCalculator */ = {
+		1BE0D7B6238D608000702CFE /* CoordinatorSample */ = {
 			isa = PBXGroup;
 			children = (
-				1B4AABF8238D9438004565B6 /* PowerfulNumber.py */,
 				1BE0D7B7238D608000702CFE /* AppDelegate.swift */,
 				1BE0D7B9238D608000702CFE /* SceneDelegate.swift */,
 				1BE0D7BB238D608000702CFE /* ViewController.swift */,
 				1BBBD8CA238D662C007A47F2 /* MainCoordinator.swift */,
+				1B6BE54223DF14D600530D5E /* SampleViewController.swift */,
+				1B6BE54423DF176500530D5E /* SampleCoordinator.swift */,
 				1BE0D7BD238D608000702CFE /* Main.storyboard */,
 				1BE0D7C0238D608200702CFE /* Assets.xcassets */,
 				1BE0D7C2238D608200702CFE /* LaunchScreen.storyboard */,
 				1BE0D7C5238D608200702CFE /* Info.plist */,
 			);
-			path = StrangeCalculator;
+			path = CoordinatorSample;
 			sourceTree = "<group>";
 		};
-		1BE0D7CD238D608300702CFE /* StrangeCalculatorTests */ = {
+		1BE0D7CD238D608300702CFE /* CoordinatorSampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				1BE0D7CE238D608300702CFE /* StrangeCalculatorTests.swift */,
+				1B6BE54623DF17CE00530D5E /* CoordinatorSampleTests.swift */,
 				1BE0D7D0238D608300702CFE /* Info.plist */,
 			);
-			path = StrangeCalculatorTests;
+			path = CoordinatorSampleTests;
 			sourceTree = "<group>";
 		};
-		1BE0D7D8238D608300702CFE /* StrangeCalculatorUITests */ = {
+		1BE0D7D8238D608300702CFE /* CoordinatorSampleUITests */ = {
 			isa = PBXGroup;
 			children = (
-				1BE0D7D9238D608300702CFE /* StrangeCalculatorUITests.swift */,
+				1BE0D7D9238D608300702CFE /* CoordinatorSampleUITests.swift */,
 				1BE0D7DB238D608300702CFE /* Info.plist */,
 			);
-			path = StrangeCalculatorUITests;
+			path = CoordinatorSampleUITests;
 			sourceTree = "<group>";
 		};
 		1BE0D7E7238D636500702CFE /* AppArchitecture */ = {
@@ -161,9 +165,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1BE0D7B3238D608000702CFE /* StrangeCalculator */ = {
+		1BE0D7B3238D608000702CFE /* CoordinatorSample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1BE0D7DE238D608300702CFE /* Build configuration list for PBXNativeTarget "StrangeCalculator" */;
+			buildConfigurationList = 1BE0D7DE238D608300702CFE /* Build configuration list for PBXNativeTarget "CoordinatorSample" */;
 			buildPhases = (
 				1BE0D7B0238D608000702CFE /* Sources */,
 				1BE0D7B1238D608000702CFE /* Frameworks */,
@@ -173,14 +177,14 @@
 			);
 			dependencies = (
 			);
-			name = StrangeCalculator;
+			name = CoordinatorSample;
 			productName = StrangeCalculator;
-			productReference = 1BE0D7B4238D608000702CFE /* StrangeCalculator.app */;
+			productReference = 1BE0D7B4238D608000702CFE /* CoordinatorSample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1BE0D7C9238D608300702CFE /* StrangeCalculatorTests */ = {
+		1BE0D7C9238D608300702CFE /* CoordinatorSampleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1BE0D7E1238D608300702CFE /* Build configuration list for PBXNativeTarget "StrangeCalculatorTests" */;
+			buildConfigurationList = 1BE0D7E1238D608300702CFE /* Build configuration list for PBXNativeTarget "CoordinatorSampleTests" */;
 			buildPhases = (
 				1BE0D7C6238D608300702CFE /* Sources */,
 				1BE0D7C7238D608300702CFE /* Frameworks */,
@@ -191,14 +195,14 @@
 			dependencies = (
 				1BE0D7CC238D608300702CFE /* PBXTargetDependency */,
 			);
-			name = StrangeCalculatorTests;
+			name = CoordinatorSampleTests;
 			productName = StrangeCalculatorTests;
-			productReference = 1BE0D7CA238D608300702CFE /* StrangeCalculatorTests.xctest */;
+			productReference = 1BE0D7CA238D608300702CFE /* CoordinatorSampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		1BE0D7D4238D608300702CFE /* StrangeCalculatorUITests */ = {
+		1BE0D7D4238D608300702CFE /* CoordinatorSampleUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1BE0D7E4238D608300702CFE /* Build configuration list for PBXNativeTarget "StrangeCalculatorUITests" */;
+			buildConfigurationList = 1BE0D7E4238D608300702CFE /* Build configuration list for PBXNativeTarget "CoordinatorSampleUITests" */;
 			buildPhases = (
 				1BE0D7D1238D608300702CFE /* Sources */,
 				1BE0D7D2238D608300702CFE /* Frameworks */,
@@ -209,9 +213,9 @@
 			dependencies = (
 				1BE0D7D7238D608300702CFE /* PBXTargetDependency */,
 			);
-			name = StrangeCalculatorUITests;
+			name = CoordinatorSampleUITests;
 			productName = StrangeCalculatorUITests;
-			productReference = 1BE0D7D5238D608300702CFE /* StrangeCalculatorUITests.xctest */;
+			productReference = 1BE0D7D5238D608300702CFE /* CoordinatorSampleUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -237,7 +241,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1BE0D7AF238D608000702CFE /* Build configuration list for PBXProject "StrangeCalculator" */;
+			buildConfigurationList = 1BE0D7AF238D608000702CFE /* Build configuration list for PBXProject "CoordinatorSample" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -250,9 +254,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1BE0D7B3238D608000702CFE /* StrangeCalculator */,
-				1BE0D7C9238D608300702CFE /* StrangeCalculatorTests */,
-				1BE0D7D4238D608300702CFE /* StrangeCalculatorUITests */,
+				1BE0D7B3238D608000702CFE /* CoordinatorSample */,
+				1BE0D7C9238D608300702CFE /* CoordinatorSampleTests */,
+				1BE0D7D4238D608300702CFE /* CoordinatorSampleUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -290,7 +294,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BE0D7E9238D643B00702CFE /* Coordinator.swift in Sources */,
+				1B6BE54323DF14D600530D5E /* SampleViewController.swift in Sources */,
 				1BE0D7BC238D608000702CFE /* ViewController.swift in Sources */,
+				1B6BE54523DF176500530D5E /* SampleCoordinator.swift in Sources */,
 				1BE0D7B8238D608000702CFE /* AppDelegate.swift in Sources */,
 				1BBBD8CB238D662C007A47F2 /* MainCoordinator.swift in Sources */,
 				1BE0D7BA238D608000702CFE /* SceneDelegate.swift in Sources */,
@@ -301,9 +307,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B6BE54723DF17CE00530D5E /* CoordinatorSampleTests.swift in Sources */,
 				1B8C3B8D23916BAA00A12D6E /* TestResponse.swift in Sources */,
 				1B8C3B8E23916BAA00A12D6E /* TargetViewTestCase.swift in Sources */,
-				1BE0D7CF238D608300702CFE /* StrangeCalculatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,7 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BE0D7DA238D608300702CFE /* StrangeCalculatorUITests.swift in Sources */,
+				1BE0D7DA238D608300702CFE /* CoordinatorSampleUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,12 +326,12 @@
 /* Begin PBXTargetDependency section */
 		1BE0D7CC238D608300702CFE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1BE0D7B3238D608000702CFE /* StrangeCalculator */;
+			target = 1BE0D7B3238D608000702CFE /* CoordinatorSample */;
 			targetProxy = 1BE0D7CB238D608300702CFE /* PBXContainerItemProxy */;
 		};
 		1BE0D7D7238D608300702CFE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1BE0D7B3238D608000702CFE /* StrangeCalculator */;
+			target = 1BE0D7B3238D608000702CFE /* CoordinatorSample */;
 			targetProxy = 1BE0D7D6238D608300702CFE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -469,13 +475,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = StrangeCalculator/Info.plist;
+				DEVELOPMENT_TEAM = S5VWLM54JC;
+				INFOPLIST_FILE = CoordinatorSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.ibat.other.tests.StrangeCalculator;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = io.ibat.other.tests;
+				PRODUCT_NAME = CoordinatorSample;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -486,13 +493,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = StrangeCalculator/Info.plist;
+				DEVELOPMENT_TEAM = S5VWLM54JC;
+				INFOPLIST_FILE = CoordinatorSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.ibat.other.tests.StrangeCalculator;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = io.ibat.other.tests;
+				PRODUCT_NAME = CoordinatorSample;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -504,18 +512,18 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = StrangeCalculatorTests/Info.plist;
+				INFOPLIST_FILE = CoordinatorSampleTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.ibat.other.tests.StrangeCalculatorTests;
+				PRODUCT_BUNDLE_IDENTIFIER = io.ibat.other.tests.CoordinatorSampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StrangeCalculator.app/StrangeCalculator";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoordinatorSample.app/CoordinatorSample";
 			};
 			name = Debug;
 		};
@@ -525,18 +533,18 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = StrangeCalculatorTests/Info.plist;
+				INFOPLIST_FILE = CoordinatorSampleTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.ibat.other.tests.StrangeCalculatorTests;
+				PRODUCT_BUNDLE_IDENTIFIER = io.ibat.other.tests.CoordinatorSampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StrangeCalculator.app/StrangeCalculator";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoordinatorSample.app/CoordinatorSample";
 			};
 			name = Release;
 		};
@@ -545,17 +553,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = StrangeCalculatorUITests/Info.plist;
+				INFOPLIST_FILE = CoordinatorSampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.ibat.other.tests.StrangeCalculatorUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = io.ibat.other.tests.CoordinatorSampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = StrangeCalculator;
+				TEST_TARGET_NAME = CoordinatorSample;
 			};
 			name = Debug;
 		};
@@ -564,24 +572,24 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = StrangeCalculatorUITests/Info.plist;
+				INFOPLIST_FILE = CoordinatorSampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.ibat.other.tests.StrangeCalculatorUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = io.ibat.other.tests.CoordinatorSampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = StrangeCalculator;
+				TEST_TARGET_NAME = CoordinatorSample;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1BE0D7AF238D608000702CFE /* Build configuration list for PBXProject "StrangeCalculator" */ = {
+		1BE0D7AF238D608000702CFE /* Build configuration list for PBXProject "CoordinatorSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1BE0D7DC238D608300702CFE /* Debug */,
@@ -590,7 +598,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1BE0D7DE238D608300702CFE /* Build configuration list for PBXNativeTarget "StrangeCalculator" */ = {
+		1BE0D7DE238D608300702CFE /* Build configuration list for PBXNativeTarget "CoordinatorSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1BE0D7DF238D608300702CFE /* Debug */,
@@ -599,7 +607,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1BE0D7E1238D608300702CFE /* Build configuration list for PBXNativeTarget "StrangeCalculatorTests" */ = {
+		1BE0D7E1238D608300702CFE /* Build configuration list for PBXNativeTarget "CoordinatorSampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1BE0D7E2238D608300702CFE /* Debug */,
@@ -608,7 +616,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1BE0D7E4238D608300702CFE /* Build configuration list for PBXNativeTarget "StrangeCalculatorUITests" */ = {
+		1BE0D7E4238D608300702CFE /* Build configuration list for PBXNativeTarget "CoordinatorSampleUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1BE0D7E5238D608300702CFE /* Debug */,

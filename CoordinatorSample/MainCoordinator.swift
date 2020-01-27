@@ -1,6 +1,6 @@
 //
 //  MainCoordinator.swift
-//  StrangeCalculator
+//  CoordinatorSample
 //
 //  Created by Aldo Bergamini on 26/11/2019.
 //  Copyright © 2019 Frequency Communications. All rights reserved.
@@ -62,7 +62,8 @@ class MainCoordinator: Coordinator {
                     view.displayPowerfulResult(isPowerful, error: nil)
                 }
             }
-        }    }
+        }        
+    }
     
     
     /*
