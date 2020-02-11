@@ -8,22 +8,40 @@
 
 import Foundation
 
-public protocol TargetView {
+public protocol ViewTarget {
     
+    var coordinator: Coordinator? { set get }
 }
+
 
 public protocol Coordinator {
     
-    var viewController: TargetView { set get }
+    var viewTarget: ViewTarget { set get }
     
     func start()
 }
 
+
 public protocol SubCoordinator: Coordinator {
     
-    var parentViewController: TargetView { set get }
+    var parentView: ViewTarget { set get }
     var presenter: Coordinator? { set get }
+    
     var details: [String: Any]? { get set }
 }
+
+
+public protocol MultiCoordinator: Coordinator {
+    
+    var coordinators: [Coordinator]? { get }
+
+    var details: [String: Any]? { get set }
+    
+    func addCoordinator(target coordinator: Coordinator, forKey coordinatorKey: String)
+    func removeCoordinator(forKey coordinatorKey: String)
+}
+
+
+
 
 

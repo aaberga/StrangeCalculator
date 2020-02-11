@@ -12,13 +12,29 @@
 		1B0CD0E823DF545700330C78 /* markets_example_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 1B0CD0E123DF542600330C78 /* markets_example_response.json */; };
 		1B0CD0E923DF545B00330C78 /* dashboard_example_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 1B0CD0E023DF542600330C78 /* dashboard_example_response.json */; };
 		1B0CD0EA23DF545B00330C78 /* markets_example_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 1B0CD0E123DF542600330C78 /* markets_example_response.json */; };
+		1B3459BA23E1D5A600BCF5BF /* NewsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3459B923E1D5A600BCF5BF /* NewsCoordinator.swift */; };
+		1B3459BC23E1D74600BCF5BF /* BriefingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3459BB23E1D74600BCF5BF /* BriefingsCoordinator.swift */; };
+		1B3459BE23E1D76000BCF5BF /* AnalysisCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3459BD23E1D76000BCF5BF /* AnalysisCoordinator.swift */; };
+		1B3459C023E1D77700BCF5BF /* MarketsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3459BF23E1D77700BCF5BF /* MarketsCoordinator.swift */; };
+		1B3459C223E1D78700BCF5BF /* ReportsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3459C123E1D78700BCF5BF /* ReportsCoordinator.swift */; };
+		1B3459C423E33D1D00BCF5BF /* AppCoordinatorFXWSubjectCoordinatorInteractionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3459C323E33D1D00BCF5BF /* AppCoordinatorFXWSubjectCoordinatorInteractionTests.swift */; };
+		1B61A9FC23E0445800E37230 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B61A9FB23E0445800E37230 /* AppCoordinator.swift */; };
+		1B61A9FF23E0459400E37230 /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B61A9FE23E0459400E37230 /* AppController.swift */; };
+		1B61AA0123E05A9600E37230 /* AppCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B61AA0023E05A9600E37230 /* AppCoordinatorTests.swift */; };
+		1B61AA0323E08E9800E37230 /* DailyFXServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B61AA0223E08E9800E37230 /* DailyFXServiceTests.swift */; };
+		1B61AA0523E0907800E37230 /* PluggableTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B61AA0423E0907800E37230 /* PluggableTestCase.swift */; };
+		1B61AA0723E09FF200E37230 /* SimpleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B61AA0623E09FF200E37230 /* SimpleService.swift */; };
+		1B65C2F623DFB559007328FD /* FXWSubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B65C2F523DFB559007328FD /* FXWSubjectViewController.swift */; };
 		1B6BE54323DF14D600530D5E /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6BE54223DF14D600530D5E /* SampleViewController.swift */; };
 		1B6BE54523DF176500530D5E /* SampleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6BE54423DF176500530D5E /* SampleCoordinator.swift */; };
-		1B6BE54723DF17CE00530D5E /* FXWorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6BE54623DF17CE00530D5E /* FXWorldTests.swift */; };
 		1B6BE54923DF4E3600530D5E /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6BE54823DF4E3600530D5E /* Service.swift */; };
 		1B6BE54B23DF4FB700530D5E /* SampleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6BE54A23DF4FB700530D5E /* SampleService.swift */; };
 		1B8C3B8D23916BAA00A12D6E /* TestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8C3B8B23916BAA00A12D6E /* TestResponse.swift */; };
-		1B8C3B8E23916BAA00A12D6E /* TargetViewTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8C3B8C23916BAA00A12D6E /* TargetViewTestCase.swift */; };
+		1BA395B623E0390D00427282 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA395B523E0390D00427282 /* NewsViewController.swift */; };
+		1BA395B823E0396100427282 /* BriefingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA395B723E0396100427282 /* BriefingsViewController.swift */; };
+		1BA395BA23E0397D00427282 /* AnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA395B923E0397D00427282 /* AnalysisViewController.swift */; };
+		1BA395BC23E0399200427282 /* MarketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA395BB23E0399200427282 /* MarketsViewController.swift */; };
+		1BA395BE23E039A800427282 /* ReportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA395BD23E039A800427282 /* ReportsViewController.swift */; };
 		1BE0D7B8238D608000702CFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0D7B7238D608000702CFE /* AppDelegate.swift */; };
 		1BE0D7BA238D608000702CFE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0D7B9238D608000702CFE /* SceneDelegate.swift */; };
 		1BE0D7BF238D608000702CFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BE0D7BD238D608000702CFE /* Main.storyboard */; };
@@ -26,8 +42,7 @@
 		1BE0D7C4238D608200702CFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BE0D7C2238D608200702CFE /* LaunchScreen.storyboard */; };
 		1BE0D7DA238D608300702CFE /* FXWorldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0D7D9238D608300702CFE /* FXWorldUITests.swift */; };
 		1BE0D7E9238D643B00702CFE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0D7E8238D643B00702CFE /* Coordinator.swift */; };
-		1BEA6CB323DF59DB0066F848 /* FXWorldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA6CB223DF59DB0066F848 /* FXWorldViewController.swift */; };
-		1BEA6CB523DF5A030066F848 /* FXWorldCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA6CB423DF5A030066F848 /* FXWorldCoordinator.swift */; };
+		1BEA6CB523DF5A030066F848 /* FXWSubjectCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA6CB423DF5A030066F848 /* FXWSubjectCoordinator.swift */; };
 		1BEA6CB823DF5CE10066F848 /* DailyFXService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA6CB723DF5CE10066F848 /* DailyFXService.swift */; };
 		1BEA6CBB23DF5DB40066F848 /* FXModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA6CBA23DF5DB40066F848 /* FXModels.swift */; };
 /* End PBXBuildFile section */
@@ -53,13 +68,29 @@
 		1B0CD0E023DF542600330C78 /* dashboard_example_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dashboard_example_response.json; sourceTree = "<group>"; };
 		1B0CD0E123DF542600330C78 /* markets_example_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = markets_example_response.json; sourceTree = "<group>"; };
 		1B0CD0E223DF542600330C78 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1B3459B923E1D5A600BCF5BF /* NewsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCoordinator.swift; sourceTree = "<group>"; };
+		1B3459BB23E1D74600BCF5BF /* BriefingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BriefingsCoordinator.swift; sourceTree = "<group>"; };
+		1B3459BD23E1D76000BCF5BF /* AnalysisCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisCoordinator.swift; sourceTree = "<group>"; };
+		1B3459BF23E1D77700BCF5BF /* MarketsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsCoordinator.swift; sourceTree = "<group>"; };
+		1B3459C123E1D78700BCF5BF /* ReportsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsCoordinator.swift; sourceTree = "<group>"; };
+		1B3459C323E33D1D00BCF5BF /* AppCoordinatorFXWSubjectCoordinatorInteractionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorFXWSubjectCoordinatorInteractionTests.swift; sourceTree = "<group>"; };
+		1B61A9FB23E0445800E37230 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		1B61A9FE23E0459400E37230 /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
+		1B61AA0023E05A9600E37230 /* AppCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTests.swift; sourceTree = "<group>"; };
+		1B61AA0223E08E9800E37230 /* DailyFXServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyFXServiceTests.swift; sourceTree = "<group>"; };
+		1B61AA0423E0907800E37230 /* PluggableTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PluggableTestCase.swift; sourceTree = "<group>"; };
+		1B61AA0623E09FF200E37230 /* SimpleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleService.swift; sourceTree = "<group>"; };
+		1B65C2F523DFB559007328FD /* FXWSubjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXWSubjectViewController.swift; sourceTree = "<group>"; };
 		1B6BE54223DF14D600530D5E /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SampleViewController.swift; path = ../SampleViewController.swift; sourceTree = "<group>"; };
 		1B6BE54423DF176500530D5E /* SampleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SampleCoordinator.swift; path = ../SampleCoordinator.swift; sourceTree = "<group>"; };
-		1B6BE54623DF17CE00530D5E /* FXWorldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXWorldTests.swift; sourceTree = "<group>"; };
 		1B6BE54823DF4E3600530D5E /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		1B6BE54A23DF4FB700530D5E /* SampleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleService.swift; sourceTree = "<group>"; };
 		1B8C3B8B23916BAA00A12D6E /* TestResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestResponse.swift; sourceTree = "<group>"; };
-		1B8C3B8C23916BAA00A12D6E /* TargetViewTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetViewTestCase.swift; sourceTree = "<group>"; };
+		1BA395B523E0390D00427282 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		1BA395B723E0396100427282 /* BriefingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BriefingsViewController.swift; sourceTree = "<group>"; };
+		1BA395B923E0397D00427282 /* AnalysisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisViewController.swift; sourceTree = "<group>"; };
+		1BA395BB23E0399200427282 /* MarketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsViewController.swift; sourceTree = "<group>"; };
+		1BA395BD23E039A800427282 /* ReportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsViewController.swift; sourceTree = "<group>"; };
 		1BE0D7B4238D608000702CFE /* FXWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FXWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BE0D7B7238D608000702CFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BE0D7B9238D608000702CFE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,8 +104,7 @@
 		1BE0D7D9238D608300702CFE /* FXWorldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXWorldUITests.swift; sourceTree = "<group>"; };
 		1BE0D7DB238D608300702CFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BE0D7E8238D643B00702CFE /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		1BEA6CB223DF59DB0066F848 /* FXWorldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXWorldViewController.swift; sourceTree = "<group>"; };
-		1BEA6CB423DF5A030066F848 /* FXWorldCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXWorldCoordinator.swift; sourceTree = "<group>"; };
+		1BEA6CB423DF5A030066F848 /* FXWSubjectCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXWSubjectCoordinator.swift; sourceTree = "<group>"; };
 		1BEA6CB723DF5CE10066F848 /* DailyFXService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyFXService.swift; sourceTree = "<group>"; };
 		1BEA6CBA23DF5DB40066F848 /* FXModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,13 +151,31 @@
 			path = "Code Challenge Data";
 			sourceTree = "<group>";
 		};
+		1B61A9FD23E0455D00E37230 /* AppLogic */ = {
+			isa = PBXGroup;
+			children = (
+				1B61A9FE23E0459400E37230 /* AppController.swift */,
+				1B61A9FB23E0445800E37230 /* AppCoordinator.swift */,
+			);
+			path = AppLogic;
+			sourceTree = "<group>";
+		};
 		1B8C3B8A23916BAA00A12D6E /* TestHelpers */ = {
 			isa = PBXGroup;
 			children = (
 				1B8C3B8B23916BAA00A12D6E /* TestResponse.swift */,
-				1B8C3B8C23916BAA00A12D6E /* TargetViewTestCase.swift */,
+				1B61AA0423E0907800E37230 /* PluggableTestCase.swift */,
 			);
 			path = TestHelpers;
+			sourceTree = "<group>";
+		};
+		1BA395B423E038BC00427282 /* Common Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1B65C2F523DFB559007328FD /* FXWSubjectViewController.swift */,
+				1BEA6CB423DF5A030066F848 /* FXWSubjectCoordinator.swift */,
+			);
+			path = "Common Classes";
 			sourceTree = "<group>";
 		};
 		1BE0D7AB238D608000702CFE = {
@@ -157,7 +205,8 @@
 			isa = PBXGroup;
 			children = (
 				1BEA6CB123DF59A50066F848 /* Sample_Code */,
-				1BEA6CB023DF595C0066F848 /* MainScreen */,
+				1B61A9FD23E0455D00E37230 /* AppLogic */,
+				1BEA6CB023DF595C0066F848 /* AppScreens */,
 				1BEA6CB623DF5CA40066F848 /* DailyFX_API */,
 				1BEA6CB923DF5D8B0066F848 /* FXModels */,
 				1BE0D7B7238D608000702CFE /* AppDelegate.swift */,
@@ -174,7 +223,9 @@
 			isa = PBXGroup;
 			children = (
 				1B0CD0E623DF544200330C78 /* Code Challenge Data */,
-				1B6BE54623DF17CE00530D5E /* FXWorldTests.swift */,
+				1B3459C323E33D1D00BCF5BF /* AppCoordinatorFXWSubjectCoordinatorInteractionTests.swift */,
+				1B61AA0023E05A9600E37230 /* AppCoordinatorTests.swift */,
+				1B61AA0223E08E9800E37230 /* DailyFXServiceTests.swift */,
 				1BE0D7D0238D608300702CFE /* Info.plist */,
 			);
 			path = FXWorldTests;
@@ -194,17 +245,27 @@
 			children = (
 				1BE0D7E8238D643B00702CFE /* Coordinator.swift */,
 				1B6BE54823DF4E3600530D5E /* Service.swift */,
+				1B61AA0623E09FF200E37230 /* SimpleService.swift */,
 			);
 			path = AppArchitecture;
 			sourceTree = "<group>";
 		};
-		1BEA6CB023DF595C0066F848 /* MainScreen */ = {
+		1BEA6CB023DF595C0066F848 /* AppScreens */ = {
 			isa = PBXGroup;
 			children = (
-				1BEA6CB223DF59DB0066F848 /* FXWorldViewController.swift */,
-				1BEA6CB423DF5A030066F848 /* FXWorldCoordinator.swift */,
+				1BA395B523E0390D00427282 /* NewsViewController.swift */,
+				1B3459B923E1D5A600BCF5BF /* NewsCoordinator.swift */,
+				1BA395B723E0396100427282 /* BriefingsViewController.swift */,
+				1B3459BB23E1D74600BCF5BF /* BriefingsCoordinator.swift */,
+				1BA395B923E0397D00427282 /* AnalysisViewController.swift */,
+				1B3459BD23E1D76000BCF5BF /* AnalysisCoordinator.swift */,
+				1BA395BB23E0399200427282 /* MarketsViewController.swift */,
+				1B3459BF23E1D77700BCF5BF /* MarketsCoordinator.swift */,
+				1BA395BD23E039A800427282 /* ReportsViewController.swift */,
+				1B3459C123E1D78700BCF5BF /* ReportsCoordinator.swift */,
+				1BA395B423E038BC00427282 /* Common Classes */,
 			);
-			path = MainScreen;
+			path = AppScreens;
 			sourceTree = "<group>";
 		};
 		1BEA6CB123DF59A50066F848 /* Sample_Code */ = {
@@ -369,16 +430,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BA395B823E0396100427282 /* BriefingsViewController.swift in Sources */,
+				1BA395BC23E0399200427282 /* MarketsViewController.swift in Sources */,
+				1B61A9FC23E0445800E37230 /* AppCoordinator.swift in Sources */,
 				1BEA6CBB23DF5DB40066F848 /* FXModels.swift in Sources */,
-				1BEA6CB523DF5A030066F848 /* FXWorldCoordinator.swift in Sources */,
+				1BEA6CB523DF5A030066F848 /* FXWSubjectCoordinator.swift in Sources */,
+				1B61A9FF23E0459400E37230 /* AppController.swift in Sources */,
+				1BA395BE23E039A800427282 /* ReportsViewController.swift in Sources */,
 				1BE0D7E9238D643B00702CFE /* Coordinator.swift in Sources */,
+				1BA395B623E0390D00427282 /* NewsViewController.swift in Sources */,
+				1B3459BA23E1D5A600BCF5BF /* NewsCoordinator.swift in Sources */,
 				1B6BE54323DF14D600530D5E /* SampleViewController.swift in Sources */,
 				1BEA6CB823DF5CE10066F848 /* DailyFXService.swift in Sources */,
 				1B6BE54523DF176500530D5E /* SampleCoordinator.swift in Sources */,
-				1BEA6CB323DF59DB0066F848 /* FXWorldViewController.swift in Sources */,
 				1BE0D7B8238D608000702CFE /* AppDelegate.swift in Sources */,
+				1B3459C223E1D78700BCF5BF /* ReportsCoordinator.swift in Sources */,
+				1B65C2F623DFB559007328FD /* FXWSubjectViewController.swift in Sources */,
+				1B3459C023E1D77700BCF5BF /* MarketsCoordinator.swift in Sources */,
+				1BA395BA23E0397D00427282 /* AnalysisViewController.swift in Sources */,
 				1BE0D7BA238D608000702CFE /* SceneDelegate.swift in Sources */,
+				1B3459BC23E1D74600BCF5BF /* BriefingsCoordinator.swift in Sources */,
 				1B6BE54923DF4E3600530D5E /* Service.swift in Sources */,
+				1B61AA0723E09FF200E37230 /* SimpleService.swift in Sources */,
+				1B3459BE23E1D76000BCF5BF /* AnalysisCoordinator.swift in Sources */,
 				1B6BE54B23DF4FB700530D5E /* SampleService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,9 +461,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B6BE54723DF17CE00530D5E /* FXWorldTests.swift in Sources */,
+				1B61AA0323E08E9800E37230 /* DailyFXServiceTests.swift in Sources */,
+				1B61AA0123E05A9600E37230 /* AppCoordinatorTests.swift in Sources */,
+				1B3459C423E33D1D00BCF5BF /* AppCoordinatorFXWSubjectCoordinatorInteractionTests.swift in Sources */,
+				1B61AA0523E0907800E37230 /* PluggableTestCase.swift in Sources */,
 				1B8C3B8D23916BAA00A12D6E /* TestResponse.swift in Sources */,
-				1B8C3B8E23916BAA00A12D6E /* TargetViewTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,7 +562,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -540,7 +616,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -557,6 +633,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S5VWLM54JC;
 				INFOPLIST_FILE = FXWorld/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -575,6 +652,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S5VWLM54JC;
 				INFOPLIST_FILE = FXWorld/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -592,7 +670,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CoordinatorSampleTests/Info.plist;
+				INFOPLIST_FILE = FXWorldTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -613,7 +691,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CoordinatorSampleTests/Info.plist;
+				INFOPLIST_FILE = FXWorldTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -633,7 +711,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CoordinatorSampleUITests/Info.plist;
+				INFOPLIST_FILE = FXWorldUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -652,7 +730,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CoordinatorSampleUITests/Info.plist;
+				INFOPLIST_FILE = FXWorldUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

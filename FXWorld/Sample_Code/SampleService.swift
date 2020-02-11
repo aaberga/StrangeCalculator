@@ -12,11 +12,29 @@ import Foundation
 
 class SampleService: Service {
     
+    
+    var ready: Bool
+    
+    func prepareRequestMethods(with responseBlocks: [String: APIResponseBlock]? = nil) {
+    }
+    
+    func requestMethodsSignature() -> [APIMethod] {
+        return []
+    }
+
+    func registerResponse(block responseBlock: (ResultType) -> Void, for request: APIMethod) {
+    }
+    
+    func sendRequest(for method: APIMethod, withData data: [String : Any]?) {
+    }
+    
+    
     var client: ServiceClient
     
     init(withClient target: ServiceClient) {
         
         self.client = target
+        self.ready = false
     }
     
 }

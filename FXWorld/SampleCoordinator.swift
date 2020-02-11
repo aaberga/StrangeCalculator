@@ -14,7 +14,7 @@ class SampleCoordinator: Coordinator {
     
     // MARK: Properties
     
-    var viewController: TargetView
+    var viewTarget: ViewTarget
     
     
     // MARK: - Coordinator Interface
@@ -26,16 +26,16 @@ class SampleCoordinator: Coordinator {
     
     // MARK: - Life Cycle
     
-    init(viewController: TargetView) {
+    init(viewController: ViewTarget) {
         
-        self.viewController = viewController
+        self.viewTarget = viewController
     }
     
     // MARK: - Helpers
     
     func resetDisplay() {
         
-        if let viewController = self.viewController as? SampleDisplayView {
+        if let viewController = self.viewTarget as? SampleDisplayView {
             
             viewController.clearDisplay()
         }
@@ -49,7 +49,7 @@ class SampleCoordinator: Coordinator {
                 
                 let isTrue = randomBool(integerInput)
                 
-                if let view = self.viewController as? SampleDisplayView {
+                if let view = self.viewTarget as? SampleDisplayView {
                     
                     view.displayCalculationResult(isTrue, error: nil)
                 }
@@ -63,7 +63,7 @@ class SampleCoordinator: Coordinator {
 
         if let _ = input {
             
-            if let view = self.viewController as? SampleDisplayView {
+            if let view = self.viewTarget as? SampleDisplayView {
                 
                 view.displayStringResult(resultString, error: nil)
             }

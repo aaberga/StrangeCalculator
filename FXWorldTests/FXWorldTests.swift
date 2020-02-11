@@ -1,6 +1,6 @@
 //
-//  CoordinatorSampleTests.swift
-//  CoordinatorSampleTests
+//  FXWorldTests.swift
+//  FXWorldTests
 //
 //  Created by Aldo Bergamini on 27/01/2020.
 //  Copyright © 2020 iBat Inc. All rights reserved.
@@ -9,15 +9,14 @@
 import XCTest
 
 
-@testable import CoordinatorSample
+@testable import FXWorld
 
 
-class CoordinatorSampleTests: TargetViewTestCase, SampleDisplayView {
+class FXWorldTests: PluggableTestCase, SampleDisplayView {
     
     // MARK: Properties
     
-    var coordinator: SampleCoordinator?
-    
+    var coordinator: Coordinator?
     
     // MARK: - Setup
     
@@ -48,7 +47,7 @@ class CoordinatorSampleTests: TargetViewTestCase, SampleDisplayView {
         
         if let testResponse = self.testResponse {
             
-            self.evaluateResponse(key: testResponse.testKey, response: (result: result, error: error))
+            self.evaluateResponse(key: testResponse.testKey, response: (status: nil, result: result, error: error))
         }
     }
 
@@ -56,7 +55,7 @@ class CoordinatorSampleTests: TargetViewTestCase, SampleDisplayView {
         
         if let testResponse = self.testResponse {
             
-            self.evaluateResponse(key: testResponse.testKey, response: (result: result, error: error))
+            self.evaluateResponse(key: testResponse.testKey, response: (status: nil, result: result, error: error))
         }
     }
     
@@ -74,7 +73,7 @@ class CoordinatorSampleTests: TargetViewTestCase, SampleDisplayView {
         self.testResponse?.testKey = testKey
         self.testResponse?.expectation = expectationGuard
         
-        if let coordinator = self.coordinator  {
+        if let coordinator = self.coordinator as? SampleCoordinator {
             
             coordinator.resetDisplay()
         }
@@ -99,7 +98,7 @@ class CoordinatorSampleTests: TargetViewTestCase, SampleDisplayView {
         self.testResponse?.expectedResults[testKey] = true
         self.testResponse?.expectedErrors[testKey] = nil
         
-        if let coordinator = self.coordinator  {
+        if let coordinator = self.coordinator as? SampleCoordinator  {
             
             coordinator.doCalculation("1")
         }
@@ -110,6 +109,10 @@ class CoordinatorSampleTests: TargetViewTestCase, SampleDisplayView {
         }
     }
     
+    
+
+    // MARK: - Unit TEST METHODS
+
     func testDoCalculation_withResponseAction() {
         
         let testKey = "testDoCalculation_withResponseAction"
@@ -135,7 +138,7 @@ class CoordinatorSampleTests: TargetViewTestCase, SampleDisplayView {
         
         self.testResponse?.responseActions[testKey] = closureName
         
-        if let coordinator = self.coordinator  {
+        if let coordinator = self.coordinator as? SampleCoordinator   {
             
             self.testResponse?.expectation = expectationGuard
             coordinator.doCalculation("1")
@@ -150,7 +153,7 @@ class CoordinatorSampleTests: TargetViewTestCase, SampleDisplayView {
  
     
     
-    // MARK: - Performance Example
+    // MARK: • Performance Example
     
     func testPerformanceExample() {
         
@@ -177,7 +180,7 @@ class CoordinatorSampleTests: TargetViewTestCase, SampleDisplayView {
                 }
             }
             
-            if let coordinator = self.coordinator  {
+            if let coordinator = self.coordinator as? SampleCoordinator   {
                 
                 coordinator.doCalculationWithResult("8")
             }

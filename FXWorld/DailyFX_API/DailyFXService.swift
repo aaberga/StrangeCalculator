@@ -23,60 +23,81 @@ enum Endpoint: String {
 
 
 
-class DailyFXService {
-
-    var client: ServiceClient
+class DailyFXService: SimpleService {
     
-    init(withClient target: ServiceClient) {
+    // MARK: Service Properties
+    
+        // -----
+    
+    
+    // MARK: Service Life Cycle
+    
+        // -----
+
         
-        self.client = target
+    // MARK: Service Methods
+    
+    override func prepareRequestMethods(with responseBlocks: [String: APIResponseBlock]? = nil) {
+        
+        super.prepareRequestMethods(with: responseBlocks)
+        
+        if let _ = responseBlocks { } else {
+            
+            let dashboardResponse: APIResponseBlock = { (resultTupel: ResultType) -> Void in
+                
+                if let resultData = resultTupel.result as? Data {
+                    
+                    do {
+                        
+                        let decoder = JSONDecoder()
+                        decoder.keyDecodingStrategy = .convertFromSnakeCase
+                        decoder.dateDecodingStrategy = .secondsSince1970
+                        let dashboardData = try decoder.decode(AllNews.self, from: resultData)
+                        
+                        self.client.receive(status: resultTupel.status, result: dashboardData, error: resultTupel.error)
+                        
+                    } catch {
+                        
+                        self.client.receive(status: resultTupel.status, result: resultTupel.result, error: resultTupel.error)
+                    }
+                }
+            }
+            self.registerResponse(block: dashboardResponse, for: Endpoint.dashboard.rawValue)
+            
+            let marketsResponse: APIResponseBlock = { (resultTupel: ResultType) -> Void in
+                
+                if let resultData = resultTupel.result as? Data {
+                    
+                    do {
+                        
+                        let decoder = JSONDecoder()
+                        decoder.keyDecodingStrategy = .convertFromSnakeCase
+                        decoder.dateDecodingStrategy = .secondsSince1970
+                        let marketsData = try decoder.decode(MarketsResponse.self, from: resultData)
+
+                        self.client.receive(status: resultTupel.status, result: marketsData, error: resultTupel.error)
+                        
+                    } catch {
+                        
+                        self.client.receive(status: resultTupel.status, result: resultTupel.result, error: resultTupel.error)
+                    }
+                }
+            }
+            self.registerResponse(block: marketsResponse, for: Endpoint.markets.rawValue)
+        }
     }
     
     
+    // MARK: Custom DailyFX Service Methods
     
-    func sendRequest(for endpoint: Endpoint) {
-        /* Configure session, choose between:
-           * defaultSessionConfiguration
-           * ephemeralSessionConfiguration
-           * backgroundSessionConfigurationWithIdentifier:
-         And set session-wide properties, such as: HTTPAdditionalHeaders,
-         HTTPCookieAcceptPolicy, requestCachePolicy or timeoutIntervalForRequest.
-         */
+    func sendDashboardRequest(withData data: [String: Any]? = nil) {
         
-        let sessionConfig = URLSessionConfiguration.default
-
-        /* Create session, and optionally set a URLSessionDelegate. */
-        let session = URLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
-
-        /* Create the Request:
-         
-            Dashboard (GET https://content.dailyfx.com/api/v1/dashboard)
-         
-         or
-         
-            Markets (GET https://content.dailyfx.com/api/v1/markets)
-         */
-
-        let commandURLString = Host.base.rawValue + endpoint.rawValue
+        self.sendRequest(for: Endpoint.dashboard.rawValue, withData: data)
+    }
+    
+    
+    func sendMarketsRequest(withData data: [String: Any]? = nil) {
         
-        guard let URL = URL(string: commandURLString) else {return}
-        var request = URLRequest(url: URL)
-        request.httpMethod = "GET"
-
-        /* Start a new Task */
-        let task = session.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
-            
-            if (error == nil) {
-                // Success
-                let statusCode = (response as! HTTPURLResponse).statusCode
-                print("URL Session Task Succeeded: HTTP \(statusCode)")
-                
-            } else {
-                // Failure
-                print("URL Session Task Failed: %@", error!.localizedDescription);
-            }
-        })
-        task.resume()
-        session.finishTasksAndInvalidate()
+        self.sendRequest(for: Endpoint.markets.rawValue, withData: data)
     }
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 
-protocol SampleDisplayView: TargetView {
+protocol SampleDisplayView: ViewTarget {
     
     func clearDisplay ()
     func displayCalculationResult(_ result: Bool, error: Error?)
@@ -32,7 +32,6 @@ class SampleViewController: UIViewController, SampleDisplayView {
 
     // Private Properties
     
-    private var coordinator: Coordinator?
     
     
     // Outlets
@@ -41,7 +40,10 @@ class SampleViewController: UIViewController, SampleDisplayView {
     
     // Actions
     
+    // TargetView Properties
     
+    var coordinator: Coordinator?
+
     
     // Sample View Interface
     
